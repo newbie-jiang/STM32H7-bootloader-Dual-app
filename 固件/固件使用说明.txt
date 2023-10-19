@@ -1,0 +1,17 @@
+keil mdk方法：
+                         烧录工程 1.QSPI_APP_01
+                         烧录工程 2.QSPI_APP_02
+                         烧录工程 6.READ_SD_APP_TO_QSPI_RUNNING
+                                                      需使用keil MDK下载算法 后缀FLM
+
+
+
+CubeProgrammer方法：
+                          bootloader.bin烧写至 0x0800 0000
+                          app1.bin烧写至 0x9000 0000
+                          app2.bin烧写至 0x9040 0000
+                                                        需使用 CubeProgrammer下载算法 后缀stldr
+
+
+
+                          CubeProgrammer方法   固件下载完成之后需要将开发板 重新上电（非复位）
