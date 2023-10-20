@@ -7,7 +7,7 @@ keil mdk方法：
 
 
 CubeProgrammer方法：
-                          bootloader.bin烧写至 0x0800 0000
+                          bootloader.bin烧写至 0x0800 0000      size:0x2000
                           app1.bin烧写至 0x9000 0000
                           app2.bin烧写至 0x9040 0000
                                                         需使用 CubeProgrammer下载算法 后缀stldr
