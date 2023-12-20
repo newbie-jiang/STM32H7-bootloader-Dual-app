@@ -1,5 +1,5 @@
 #include "bsp_usart.h" 
-
+//#include "ring_buffer.h"
  
 
 
@@ -77,6 +77,19 @@ void bsp_debug_uart4_init(void)
 	printf("-----------------boot+app experiment-------------------------\r\n");
 	
 }
+
+
+void putstr(const char *str)
+{
+	while (*str)
+	{
+		putchar(*str);
+		str++;
+	}
+}
+
+
+
 
 
 

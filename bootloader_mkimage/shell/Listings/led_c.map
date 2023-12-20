@@ -1,0 +1,388 @@
+Component: ARM Compiler 5.06 update 6 (build 750) Tool: armlink [4d35ed]
+
+==============================================================================
+
+Section Cross References
+
+    main.o(i.mymain) refers to uart.o(i.uart_init) for uart_init
+    main.o(i.mymain) refers to uart.o(i.putstr) for putstr
+    main.o(i.mymain) refers to shell.o(i.shell) for shell
+    main.o(i.mymain) refers to main.o(i.relocate_and_start_app) for relocate_and_start_app
+    main.o(i.relocate_and_start_app) refers to main.o(i.be32_to_cpu) for be32_to_cpu
+    main.o(i.relocate_and_start_app) refers to uart.o(i.putstr) for putstr
+    main.o(i.relocate_and_start_app) refers to uart.o(i.puthex) for puthex
+    main.o(i.relocate_and_start_app) refers to main.o(i.copy_app) for copy_app
+    main.o(i.relocate_and_start_app) refers to exception.o(i.set_new_vector) for set_new_vector
+    main.o(i.relocate_and_start_app) refers to start.o(.text) for start_app
+    shell.o(i.finsh_get_echo) refers to shell.o(.bss) for g_shell
+    shell.o(i.finsh_get_prompt) refers to shell.o(.data) for finsh_prompt_custom
+    shell.o(i.finsh_get_prompt_mode) refers to shell.o(.bss) for g_shell
+    shell.o(i.finsh_getchar) refers to uart.o(i.getchar) for getchar
+    shell.o(i.finsh_set_echo) refers to shell.o(.bss) for g_shell
+    shell.o(i.finsh_set_prompt_mode) refers to shell.o(.bss) for g_shell
+    shell.o(i.shell) refers to shell.o(i.finsh_get_prompt) for finsh_get_prompt
+    shell.o(i.shell) refers to uart.o(i.putstr) for putstr
+    shell.o(i.shell) refers to shell.o(i.finsh_getchar) for finsh_getchar
+    shell.o(i.shell) refers to rt_memcpy_v6.o(.text) for __aeabi_memcpy
+    shell.o(i.shell) refers to string.o(i.strlen) for strlen
+    shell.o(i.shell) refers to shell.o(i.shell_handle_history) for shell_handle_history
+    shell.o(i.shell) refers to uart.o(i.putchar) for putchar
+    shell.o(i.shell) refers to rt_memmove_v6.o(.text) for __aeabi_memmove
+    shell.o(i.shell) refers to shell.o(i.shell_push_history) for shell_push_history
+    shell.o(i.shell) refers to parser.o(i.msh_exec) for msh_exec
+    shell.o(i.shell) refers to rt_memclr.o(.text) for __aeabi_memclr
+    shell.o(i.shell) refers to shell.o(.bss) for g_shell
+    shell.o(i.shell_handle_history) refers to uart.o(i.putstr) for putstr
+    shell.o(i.shell_handle_history) refers to uart.o(i.putchar) for putchar
+    shell.o(i.shell_handle_history) refers to shell.o(i.finsh_get_prompt) for finsh_get_prompt
+    shell.o(i.shell_handle_history) refers to shell.o(.bss) for g_shell
+    shell.o(i.shell_push_history) refers to string.o(i.memcmp) for memcmp
+    shell.o(i.shell_push_history) refers to rt_memcpy_v6.o(.text) for __aeabi_memcpy
+    shell.o(i.shell_push_history) refers to rt_memclr.o(.text) for __aeabi_memclr
+    shell.o(i.shell_push_history) refers to shell.o(.bss) for g_shell
+    shell.o(.data) refers to shell.o(.conststring) for .conststring
+    init.o(i.SystemInit) refers to rt_memcpy_w.o(.text) for __aeabi_memcpy4
+    init.o(i.SystemInit) refers to rt_memclr_w.o(.text) for __aeabi_memclr4
+    command.o(i.find_cmd) refers to string.o(i.strcmp) for strcmp
+    command.o(i.find_cmd) refers to command.o(.data) for g_commands
+    command.o(i.get_cmds) refers to command.o(.data) for g_commands
+    command.o(.data) refers to help_cmd.o(.data) for help_cmd
+    parser.o(i._msh_exec_cmd) refers to command.o(i.find_cmd) for find_cmd
+    parser.o(i._msh_exec_cmd) refers to rt_memclr_w.o(.text) for __aeabi_memclr4
+    parser.o(i._msh_exec_cmd) refers to parser.o(i.msh_split) for msh_split
+    parser.o(i.msh_exec) refers to parser.o(i._msh_exec_cmd) for _msh_exec_cmd
+    parser.o(i.msh_exec) refers to uart.o(i.putstr) for putstr
+    parser.o(i.msh_split) refers to uart.o(i.putstr) for putstr
+    help_cmd.o(i.help_f) refers to command.o(i.get_cmds) for get_cmds
+    help_cmd.o(i.help_f) refers to uart.o(i.putstr) for putstr
+    help_cmd.o(i.help_f) refers to command.o(i.find_cmd) for find_cmd
+    help_cmd.o(.data) refers to help_cmd.o(.conststring) for .conststring
+    help_cmd.o(.data) refers to help_cmd.o(i.help_f) for help_f
+    start.o(RESET) refers to start.o(.text) for Reset_Handler
+    start.o(RESET) refers to exception.o(i.PendSV_Handler) for PendSV_Handler
+    start.o(RESET) refers to exception.o(i.SysTick_Handler) for SysTick_Handler
+    start.o(RESET) refers to exception.o(i.USART1_IRQHandler) for USART1_IRQHandler
+    start.o(RESET) refers to exception.o(i.USART3_IRQHandler) for USART3_IRQHandler
+    start.o(RESET) refers to exception.o(i.EXTI15_10_IRQHandler) for EXTI15_10_IRQHandler
+    start.o(RESET) refers to exception.o(i.TIM8_UP_IRQHandler) for TIM8_UP_IRQHandler
+    start.o(.text) refers to init.o(i.SystemInit) for SystemInit
+    start.o(.text) refers to main.o(i.mymain) for mymain
+    uart.o(i.puthex) refers to uart.o(i.putstr) for putstr
+    uart.o(i.puthex) refers to uart.o(i.putchar) for putchar
+    uart.o(i.puthex) refers to uart.o(.constdata) for hex_tab
+    uart.o(i.putstr) refers to uart.o(i.putchar) for putchar
+    rt_memcpy_v6.o(.text) refers to rt_memcpy_w.o(.text) for __aeabi_memcpy4
+    rt_memmove_v6.o(.text) refers to rt_memcpy_v6.o(.text) for __aeabi_memcpy
+    rt_memmove_v6.o(.text) refers to rt_memmove_w.o(.text) for __memmove_aligned
+    rt_memclr.o(.text) refers to rt_memclr_w.o(.text) for _memset_w
+    rt_memmove_w.o(.text) refers to rt_memcpy_w.o(.text) for __aeabi_memcpy4
+
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ../clib/memcpset.s                       0x00000000   Number         0  rt_memcpy_v6.o ABSOLUTE
+    ../clib/memcpset.s                       0x00000000   Number         0  rt_memmove_v6.o ABSOLUTE
+    ../clib/memcpset.s                       0x00000000   Number         0  rt_memmove_w.o ABSOLUTE
+    ../clib/memcpset.s                       0x00000000   Number         0  rt_memclr_w.o ABSOLUTE
+    ../clib/memcpset.s                       0x00000000   Number         0  rt_memclr.o ABSOLUTE
+    ../clib/memcpset.s                       0x00000000   Number         0  rt_memcpy_w.o ABSOLUTE
+    command.c                                0x00000000   Number         0  command.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    exception.c                              0x00000000   Number         0  exception.o ABSOLUTE
+    help_cmd.c                               0x00000000   Number         0  help_cmd.o ABSOLUTE
+    init.c                                   0x00000000   Number         0  init.o ABSOLUTE
+    main.c                                   0x00000000   Number         0  main.o ABSOLUTE
+    parser.c                                 0x00000000   Number         0  parser.o ABSOLUTE
+    shell.c                                  0x00000000   Number         0  shell.o ABSOLUTE
+    start.s                                  0x00000000   Number         0  start.o ABSOLUTE
+    string.c                                 0x00000000   Number         0  string.o ABSOLUTE
+    uart.c                                   0x00000000   Number         0  uart.o ABSOLUTE
+    RESET                                    0x08000000   Section      304  start.o(RESET)
+    .text                                    0x08000130   Section       28  start.o(.text)
+    .text                                    0x0800014c   Section      138  rt_memcpy_v6.o(.text)
+    .text                                    0x080001d6   Section      132  rt_memmove_v6.o(.text)
+    .text                                    0x0800025a   Section      100  rt_memcpy_w.o(.text)
+    .text                                    0x080002be   Section       68  rt_memclr.o(.text)
+    .text                                    0x08000302   Section       78  rt_memclr_w.o(.text)
+    .text                                    0x08000350   Section      122  rt_memmove_w.o(.text)
+    i.EXTI15_10_IRQHandler                   0x080003cc   Section        0  exception.o(i.EXTI15_10_IRQHandler)
+    i.PendSV_Handler                         0x080003e0   Section        0  exception.o(i.PendSV_Handler)
+    i.SysTick_Handler                        0x080003f0   Section        0  exception.o(i.SysTick_Handler)
+    i.SystemInit                             0x08000400   Section        0  init.o(i.SystemInit)
+    i.TIM8_UP_IRQHandler                     0x0800042c   Section        0  exception.o(i.TIM8_UP_IRQHandler)
+    i.USART1_IRQHandler                      0x08000440   Section        0  exception.o(i.USART1_IRQHandler)
+    i.USART3_IRQHandler                      0x08000454   Section        0  exception.o(i.USART3_IRQHandler)
+    i._msh_exec_cmd                          0x08000468   Section        0  parser.o(i._msh_exec_cmd)
+    _msh_exec_cmd                            0x08000469   Thumb Code   138  parser.o(i._msh_exec_cmd)
+    i.be32_to_cpu                            0x080004f2   Section        0  main.o(i.be32_to_cpu)
+    i.copy_app                               0x0800050c   Section        0  main.o(i.copy_app)
+    i.delay                                  0x08000530   Section        0  main.o(i.delay)
+    i.find_cmd                               0x0800053c   Section        0  command.o(i.find_cmd)
+    i.finsh_get_echo                         0x08000570   Section        0  shell.o(i.finsh_get_echo)
+    i.finsh_get_prompt                       0x08000580   Section        0  shell.o(i.finsh_get_prompt)
+    i.finsh_get_prompt_mode                  0x0800058c   Section        0  shell.o(i.finsh_get_prompt_mode)
+    i.finsh_getchar                          0x0800059c   Section        0  shell.o(i.finsh_getchar)
+    finsh_getchar                            0x0800059d   Thumb Code     8  shell.o(i.finsh_getchar)
+    i.finsh_set_echo                         0x080005a4   Section        0  shell.o(i.finsh_set_echo)
+    i.finsh_set_prompt_mode                  0x080005b8   Section        0  shell.o(i.finsh_set_prompt_mode)
+    i.get_cmds                               0x080005cc   Section        0  command.o(i.get_cmds)
+    i.getchar                                0x080005d4   Section        0  uart.o(i.getchar)
+    i.help_f                                 0x080005ec   Section        0  help_cmd.o(i.help_f)
+    help_f                                   0x080005ed   Thumb Code   118  help_cmd.o(i.help_f)
+    i.memcmp                                 0x08000688   Section        0  string.o(i.memcmp)
+    i.memcpy                                 0x080006ae   Section        0  string.o(i.memcpy)
+    i.memmove                                0x080006e8   Section        0  string.o(i.memmove)
+    i.memset                                 0x0800072a   Section        0  string.o(i.memset)
+    i.msh_exec                               0x08000740   Section        0  parser.o(i.msh_exec)
+    i.msh_split                              0x080007b0   Section        0  parser.o(i.msh_split)
+    msh_split                                0x080007b1   Thumb Code   200  parser.o(i.msh_split)
+    i.mymain                                 0x0800089c   Section        0  main.o(i.mymain)
+    i.putchar                                0x080008cc   Section        0  uart.o(i.putchar)
+    i.puthex                                 0x080008e4   Section        0  uart.o(i.puthex)
+    i.putstr                                 0x08000914   Section        0  uart.o(i.putstr)
+    i.relocate_and_start_app                 0x0800092c   Section        0  main.o(i.relocate_and_start_app)
+    i.set_new_vector                         0x0800099c   Section        0  exception.o(i.set_new_vector)
+    i.shell                                  0x080009a8   Section        0  shell.o(i.shell)
+    i.shell_handle_history                   0x08000d08   Section        0  shell.o(i.shell_handle_history)
+    shell_handle_history                     0x08000d09   Thumb Code    52  shell.o(i.shell_handle_history)
+    i.shell_push_history                     0x08000d44   Section        0  shell.o(i.shell_push_history)
+    shell_push_history                       0x08000d45   Thumb Code   232  shell.o(i.shell_push_history)
+    i.strcmp                                 0x08000e34   Section        0  string.o(i.strcmp)
+    i.strlen                                 0x08000e50   Section        0  string.o(i.strlen)
+    i.uart_init                              0x08000e64   Section        0  uart.o(i.uart_init)
+    .constdata                               0x08000eb4   Section       16  uart.o(.constdata)
+    .conststring                             0x08000ec4   Section        6  shell.o(.conststring)
+    .conststring                             0x08000ecc   Section      113  help_cmd.o(.conststring)
+    .data                                    0x20000000   Section        4  shell.o(.data)
+    finsh_prompt_custom                      0x20000000   Data           4  shell.o(.data)
+    .data                                    0x20000004   Section        8  command.o(.data)
+    g_commands                               0x20000004   Data           8  command.o(.data)
+    .data                                    0x2000000c   Section       16  help_cmd.o(.data)
+    .bss                                     0x2000001c   Section      492  shell.o(.bss)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$P$D$K$B$S$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$ROPI$EBA8$STANDARDLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    Image$$RW_IRAM1$$Length                  0x0000001c   Number         0  anon$$obj.o ABSOLUTE
+    Image$$RW_IRAM1$$ZI$$Length              0x000001ec   Number         0  anon$$obj.o ABSOLUTE
+    __Vectors                                0x08000000   Data           4  start.o(RESET)
+    Reset_Handler                            0x08000131   Thumb Code     8  start.o(.text)
+    start_app                                0x08000139   Thumb Code     8  start.o(.text)
+    SVC_Handler                              0x08000141   Thumb Code     8  start.o(.text)
+    __aeabi_memcpy                           0x0800014d   Thumb Code     0  rt_memcpy_v6.o(.text)
+    __rt_memcpy                              0x0800014d   Thumb Code   138  rt_memcpy_v6.o(.text)
+    _memcpy_lastbytes                        0x080001b3   Thumb Code     0  rt_memcpy_v6.o(.text)
+    __aeabi_memmove                          0x080001d7   Thumb Code     0  rt_memmove_v6.o(.text)
+    __rt_memmove                             0x080001d7   Thumb Code   132  rt_memmove_v6.o(.text)
+    __memmove_lastfew                        0x08000237   Thumb Code     0  rt_memmove_v6.o(.text)
+    __aeabi_memcpy4                          0x0800025b   Thumb Code     0  rt_memcpy_w.o(.text)
+    __aeabi_memcpy8                          0x0800025b   Thumb Code     0  rt_memcpy_w.o(.text)
+    __rt_memcpy_w                            0x0800025b   Thumb Code   100  rt_memcpy_w.o(.text)
+    _memcpy_lastbytes_aligned                0x080002a3   Thumb Code     0  rt_memcpy_w.o(.text)
+    __aeabi_memclr                           0x080002bf   Thumb Code     0  rt_memclr.o(.text)
+    __rt_memclr                              0x080002bf   Thumb Code    68  rt_memclr.o(.text)
+    _memset                                  0x080002c3   Thumb Code     0  rt_memclr.o(.text)
+    __aeabi_memclr4                          0x08000303   Thumb Code     0  rt_memclr_w.o(.text)
+    __aeabi_memclr8                          0x08000303   Thumb Code     0  rt_memclr_w.o(.text)
+    __rt_memclr_w                            0x08000303   Thumb Code    78  rt_memclr_w.o(.text)
+    _memset_w                                0x08000307   Thumb Code     0  rt_memclr_w.o(.text)
+    __aeabi_memmove4                         0x08000351   Thumb Code     0  rt_memmove_w.o(.text)
+    __aeabi_memmove8                         0x08000351   Thumb Code     0  rt_memmove_w.o(.text)
+    __rt_memmove_w                           0x08000351   Thumb Code   122  rt_memmove_w.o(.text)
+    __memmove_aligned                        0x08000377   Thumb Code     0  rt_memmove_w.o(.text)
+    __memmove_lastfew_aligned                0x080003af   Thumb Code     0  rt_memmove_w.o(.text)
+    EXTI15_10_IRQHandler                     0x080003cd   Thumb Code    14  exception.o(i.EXTI15_10_IRQHandler)
+    PendSV_Handler                           0x080003e1   Thumb Code    12  exception.o(i.PendSV_Handler)
+    SysTick_Handler                          0x080003f1   Thumb Code    12  exception.o(i.SysTick_Handler)
+    SystemInit                               0x08000401   Thumb Code    22  init.o(i.SystemInit)
+    TIM8_UP_IRQHandler                       0x0800042d   Thumb Code    14  exception.o(i.TIM8_UP_IRQHandler)
+    USART1_IRQHandler                        0x08000441   Thumb Code    14  exception.o(i.USART1_IRQHandler)
+    USART3_IRQHandler                        0x08000455   Thumb Code    14  exception.o(i.USART3_IRQHandler)
+    be32_to_cpu                              0x080004f3   Thumb Code    26  main.o(i.be32_to_cpu)
+    copy_app                                 0x0800050d   Thumb Code    36  main.o(i.copy_app)
+    delay                                    0x08000531   Thumb Code    12  main.o(i.delay)
+    find_cmd                                 0x0800053d   Thumb Code    48  command.o(i.find_cmd)
+    finsh_get_echo                           0x08000571   Thumb Code    10  shell.o(i.finsh_get_echo)
+    finsh_get_prompt                         0x08000581   Thumb Code     6  shell.o(i.finsh_get_prompt)
+    finsh_get_prompt_mode                    0x0800058d   Thumb Code    10  shell.o(i.finsh_get_prompt_mode)
+    finsh_set_echo                           0x080005a5   Thumb Code    14  shell.o(i.finsh_set_echo)
+    finsh_set_prompt_mode                    0x080005b9   Thumb Code    14  shell.o(i.finsh_set_prompt_mode)
+    get_cmds                                 0x080005cd   Thumb Code     4  command.o(i.get_cmds)
+    getchar                                  0x080005d5   Thumb Code    18  uart.o(i.getchar)
+    memcmp                                   0x08000689   Thumb Code    38  string.o(i.memcmp)
+    memcpy                                   0x080006af   Thumb Code    58  string.o(i.memcpy)
+    memmove                                  0x080006e9   Thumb Code    66  string.o(i.memmove)
+    memset                                   0x0800072b   Thumb Code    20  string.o(i.memset)
+    msh_exec                                 0x08000741   Thumb Code    86  parser.o(i.msh_exec)
+    mymain                                   0x0800089d   Thumb Code    28  main.o(i.mymain)
+    putchar                                  0x080008cd   Thumb Code    18  uart.o(i.putchar)
+    puthex                                   0x080008e5   Thumb Code    40  uart.o(i.puthex)
+    putstr                                   0x08000915   Thumb Code    22  uart.o(i.putstr)
+    relocate_and_start_app                   0x0800092d   Thumb Code    90  main.o(i.relocate_and_start_app)
+    set_new_vector                           0x0800099d   Thumb Code     6  exception.o(i.set_new_vector)
+    shell                                    0x080009a9   Thumb Code   840  shell.o(i.shell)
+    strcmp                                   0x08000e35   Thumb Code    28  string.o(i.strcmp)
+    strlen                                   0x08000e51   Thumb Code    18  string.o(i.strlen)
+    uart_init                                0x08000e65   Thumb Code    68  uart.o(i.uart_init)
+    hex_tab                                  0x08000eb4   Data          16  uart.o(.constdata)
+    Load$$RW_IRAM1$$Base                     0x08000f40   Number         0  anon$$obj.o ABSOLUTE
+    Image$$RW_IRAM1$$Base                    0x20000000   Number         0  anon$$obj.o ABSOLUTE
+    help_cmd                                 0x2000000c   Data          16  help_cmd.o(.data)
+    Image$$RW_IRAM1$$ZI$$Base                0x2000001c   Number         0  anon$$obj.o ABSOLUTE
+    g_shell                                  0x2000001c   Data         492  shell.o(.bss)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image entry point : Not specified.
+
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00000f5c, Max: 0x00080000, ABSOLUTE)
+
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00000f40, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x08000000   0x08000000   0x00000130   Data   RO          283    RESET               start.o
+    0x08000130   0x08000130   0x0000001c   Code   RO          284    .text               start.o
+    0x0800014c   0x0800014c   0x0000008a   Code   RO          330    .text               c_w.l(rt_memcpy_v6.o)
+    0x080001d6   0x080001d6   0x00000084   Code   RO          332    .text               c_w.l(rt_memmove_v6.o)
+    0x0800025a   0x0800025a   0x00000064   Code   RO          334    .text               c_w.l(rt_memcpy_w.o)
+    0x080002be   0x080002be   0x00000044   Code   RO          336    .text               c_w.l(rt_memclr.o)
+    0x08000302   0x08000302   0x0000004e   Code   RO          338    .text               c_w.l(rt_memclr_w.o)
+    0x08000350   0x08000350   0x0000007a   Code   RO          340    .text               c_w.l(rt_memmove_w.o)
+    0x080003ca   0x080003ca   0x00000002   PAD
+    0x080003cc   0x080003cc   0x00000014   Code   RO           51    i.EXTI15_10_IRQHandler  exception.o
+    0x080003e0   0x080003e0   0x00000010   Code   RO           52    i.PendSV_Handler    exception.o
+    0x080003f0   0x080003f0   0x00000010   Code   RO           53    i.SysTick_Handler   exception.o
+    0x08000400   0x08000400   0x0000002c   Code   RO          209    i.SystemInit        init.o
+    0x0800042c   0x0800042c   0x00000014   Code   RO           54    i.TIM8_UP_IRQHandler  exception.o
+    0x08000440   0x08000440   0x00000014   Code   RO           55    i.USART1_IRQHandler  exception.o
+    0x08000454   0x08000454   0x00000014   Code   RO           56    i.USART3_IRQHandler  exception.o
+    0x08000468   0x08000468   0x0000008a   Code   RO          246    i._msh_exec_cmd     parser.o
+    0x080004f2   0x080004f2   0x0000001a   Code   RO            1    i.be32_to_cpu       main.o
+    0x0800050c   0x0800050c   0x00000024   Code   RO            2    i.copy_app          main.o
+    0x08000530   0x08000530   0x0000000c   Code   RO            3    i.delay             main.o
+    0x0800053c   0x0800053c   0x00000034   Code   RO          222    i.find_cmd          command.o
+    0x08000570   0x08000570   0x00000010   Code   RO          141    i.finsh_get_echo    shell.o
+    0x08000580   0x08000580   0x0000000c   Code   RO          142    i.finsh_get_prompt  shell.o
+    0x0800058c   0x0800058c   0x00000010   Code   RO          143    i.finsh_get_prompt_mode  shell.o
+    0x0800059c   0x0800059c   0x00000008   Code   RO          144    i.finsh_getchar     shell.o
+    0x080005a4   0x080005a4   0x00000014   Code   RO          145    i.finsh_set_echo    shell.o
+    0x080005b8   0x080005b8   0x00000014   Code   RO          146    i.finsh_set_prompt_mode  shell.o
+    0x080005cc   0x080005cc   0x00000008   Code   RO          223    i.get_cmds          command.o
+    0x080005d4   0x080005d4   0x00000018   Code   RO          289    i.getchar           uart.o
+    0x080005ec   0x080005ec   0x0000009c   Code   RO          268    i.help_f            help_cmd.o
+    0x08000688   0x08000688   0x00000026   Code   RO           99    i.memcmp            string.o
+    0x080006ae   0x080006ae   0x0000003a   Code   RO          100    i.memcpy            string.o
+    0x080006e8   0x080006e8   0x00000042   Code   RO          101    i.memmove           string.o
+    0x0800072a   0x0800072a   0x00000014   Code   RO          102    i.memset            string.o
+    0x0800073e   0x0800073e   0x00000002   PAD
+    0x08000740   0x08000740   0x00000070   Code   RO          247    i.msh_exec          parser.o
+    0x080007b0   0x080007b0   0x000000ec   Code   RO          248    i.msh_split         parser.o
+    0x0800089c   0x0800089c   0x00000030   Code   RO            4    i.mymain            main.o
+    0x080008cc   0x080008cc   0x00000018   Code   RO          290    i.putchar           uart.o
+    0x080008e4   0x080008e4   0x00000030   Code   RO          291    i.puthex            uart.o
+    0x08000914   0x08000914   0x00000016   Code   RO          292    i.putstr            uart.o
+    0x0800092a   0x0800092a   0x00000002   PAD
+    0x0800092c   0x0800092c   0x00000070   Code   RO            5    i.relocate_and_start_app  main.o
+    0x0800099c   0x0800099c   0x0000000c   Code   RO           57    i.set_new_vector    exception.o
+    0x080009a8   0x080009a8   0x00000360   Code   RO          147    i.shell             shell.o
+    0x08000d08   0x08000d08   0x0000003c   Code   RO          148    i.shell_handle_history  shell.o
+    0x08000d44   0x08000d44   0x000000f0   Code   RO          149    i.shell_push_history  shell.o
+    0x08000e34   0x08000e34   0x0000001c   Code   RO          103    i.strcmp            string.o
+    0x08000e50   0x08000e50   0x00000012   Code   RO          104    i.strlen            string.o
+    0x08000e62   0x08000e62   0x00000002   PAD
+    0x08000e64   0x08000e64   0x00000050   Code   RO          293    i.uart_init         uart.o
+    0x08000eb4   0x08000eb4   0x00000010   Data   RO          294    .constdata          uart.o
+    0x08000ec4   0x08000ec4   0x00000006   Data   RO          151    .conststring        shell.o
+    0x08000eca   0x08000eca   0x00000002   PAD
+    0x08000ecc   0x08000ecc   0x00000071   Data   RO          269    .conststring        help_cmd.o
+
+
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08000f40, Size: 0x00000208, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x08000f40   0x00000004   Data   RW          152    .data               shell.o
+    0x20000004   0x08000f44   0x00000008   Data   RW          224    .data               command.o
+    0x2000000c   0x08000f4c   0x00000010   Data   RW          270    .data               help_cmd.o
+    0x2000001c        -       0x000001ec   Zero   RW          150    .bss                shell.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+        60          8          0          8          0       2641   command.o
+       124         38          0          0          0       6620   exception.o
+       156         38        113         16          0       1639   help_cmd.o
+        44         22          0          0          0        541   init.o
+       234         42          0          0          0       6867   main.o
+       486         62          0          0          0       3483   parser.o
+      1256         70          6          4        492       6727   shell.o
+        28          4        304          0          0        532   start.o
+       228          0          0          0          0       4319   string.o
+       198         32         16          0          0       4056   uart.o
+
+    ----------------------------------------------------------------------
+      2820        316        444         28        492      37425   Object Totals
+         0          0          0          0          0          0   (incl. Generated)
+         6          0          5          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+        68          0          0          0          0         68   rt_memclr.o
+        78          0          0          0          0         80   rt_memclr_w.o
+       138          0          0          0          0         68   rt_memcpy_v6.o
+       100          0          0          0          0         80   rt_memcpy_w.o
+       132          0          0          0          0         68   rt_memmove_v6.o
+       122          0          0          0          0         80   rt_memmove_w.o
+
+    ----------------------------------------------------------------------
+       640          0          0          0          0        444   Library Totals
+         2          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       638          0          0          0          0        444   c_w.l
+
+    ----------------------------------------------------------------------
+       640          0          0          0          0        444   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      3460        316        444         28        492      35737   Grand Totals
+      3460        316        444         28        492      35737   ELF Image Totals
+      3460        316        444         28          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 3904 (   3.81kB)
+    Total RW  Size (RW Data + ZI Data)               520 (   0.51kB)
+    Total ROM Size (Code + RO Data + RW Data)       3932 (   3.84kB)
+
+==============================================================================
+

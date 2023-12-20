@@ -44,7 +44,8 @@ stm32h750xb\bsp_sd.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sdram.h
 stm32h750xb\bsp_sd.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_fmc.h
 stm32h750xb\bsp_sd.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h
 stm32h750xb\bsp_sd.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h
-stm32h750xb\bsp_sd.o: D:\software_work\keil5\ARM\ARMCC\Bin\..\include\string.h
+stm32h750xb\bsp_sd.o: ..\shell\string.h
+stm32h750xb\bsp_sd.o: ..\shell\types.h
 stm32h750xb\bsp_sd.o: ../FATFS/App/fatfs.h
 stm32h750xb\bsp_sd.o: ../Middlewares/Third_Party/FatFs/src/ff.h
 stm32h750xb\bsp_sd.o: ../Middlewares/Third_Party/FatFs/src/integer.h

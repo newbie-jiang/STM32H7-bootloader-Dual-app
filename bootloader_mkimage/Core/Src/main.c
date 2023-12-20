@@ -28,6 +28,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "boot.h"
+#include "shell.h"
+#include "bsp_usart.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -102,7 +104,9 @@ int main(void)
   MX_FATFS_Init();
   MX_FMC_Init();
   /* USER CODE BEGIN 2 */
-  jump_to_qspi_flash();
+//  jump_to_qspi_flash();
+	putstr("\r\nbootloader\r\n");
+	shell();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -110,7 +114,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
+  
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

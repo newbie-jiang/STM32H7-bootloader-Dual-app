@@ -1,0 +1,35 @@
+Dependencies for Project 'led_c', Target 'led_c': (DO NOT MODIFY !)
+F (.\main.c)(0x65815D78)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections-I.\RTE\_led_c-ID:\software_work\keil5\Keil\STM32F1xx_DFP\2.0.0\Device\Include-ID:\software_work\keil5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DSTM32F10X_HD-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (uart.h)(0x65815D78)
+I (exception.h)(0x65815D78)
+I (shell.h)(0x65815D78)
+I (types.h)(0x65815D78)
+F (.\exception.c)(0x65815D78)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections-I.\RTE\_led_c-ID:\software_work\keil5\Keil\STM32F1xx_DFP\2.0.0\Device\Include-ID:\software_work\keil5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DSTM32F10X_HD-o .\objects\exception.o --omf_browse .\objects\exception.crf --depend .\objects\exception.d)
+F (.\string.c)(0x65815D78)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections-I.\RTE\_led_c-ID:\software_work\keil5\Keil\STM32F1xx_DFP\2.0.0\Device\Include-ID:\software_work\keil5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DSTM32F10X_HD-o .\objects\string.o --omf_browse .\objects\string.crf --depend .\objects\string.d)
+I (shell.h)(0x65815D78)
+I (types.h)(0x65815D78)
+F (.\shell.c)(0x65815D78)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections-I.\RTE\_led_c-ID:\software_work\keil5\Keil\STM32F1xx_DFP\2.0.0\Device\Include-ID:\software_work\keil5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DSTM32F10X_HD-o .\objects\shell.o --omf_browse .\objects\shell.crf --depend .\objects\shell.d)
+I (shell.h)(0x65815D78)
+I (types.h)(0x65815D78)
+I (uart.h)(0x65815D78)
+I (string.h)(0x65815D78)
+I (parser.h)(0x65815D78)
+F (.\init.c)(0x65815D78)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections-I.\RTE\_led_c-ID:\software_work\keil5\Keil\STM32F1xx_DFP\2.0.0\Device\Include-ID:\software_work\keil5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DSTM32F10X_HD-o .\objects\init.o --omf_browse .\objects\init.crf --depend .\objects\init.d)
+I (string.h)(0x65815D78)
+I (types.h)(0x65815D78)
+F (.\command.c)(0x65815D78)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections-I.\RTE\_led_c-ID:\software_work\keil5\Keil\STM32F1xx_DFP\2.0.0\Device\Include-ID:\software_work\keil5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DSTM32F10X_HD-o .\objects\command.o --omf_browse .\objects\command.crf --depend .\objects\command.d)
+I (command.h)(0x65815D78)
+I (types.h)(0x65815D78)
+I (string.h)(0x65815D78)
+F (.\parser.c)(0x65815D78)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections-I.\RTE\_led_c-ID:\software_work\keil5\Keil\STM32F1xx_DFP\2.0.0\Device\Include-ID:\software_work\keil5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DSTM32F10X_HD-o .\objects\parser.o --omf_browse .\objects\parser.crf --depend .\objects\parser.d)
+I (types.h)(0x65815D78)
+I (uart.h)(0x65815D78)
+I (command.h)(0x65815D78)
+I (string.h)(0x65815D78)
+F (.\help_cmd.c)(0x65815D78)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections-I.\RTE\_led_c-ID:\software_work\keil5\Keil\STM32F1xx_DFP\2.0.0\Device\Include-ID:\software_work\keil5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DSTM32F10X_HD-o .\objects\help_cmd.o --omf_browse .\objects\help_cmd.crf --depend .\objects\help_cmd.d)
+I (command.h)(0x65815D78)
+I (types.h)(0x65815D78)
+I (uart.h)(0x65815D78)
+F (.\start.s)(0x65815D78)(--cpu Cortex-M3 -g --apcs=interwork -I.\RTE\_led_c-ID:\software_work\keil5\Keil\STM32F1xx_DFP\2.0.0\Device\Include-ID:\software_work\keil5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 528" --pd "STM32F10X_HD SETA 1"--list .\listings\start.lst --xref -o .\objects\start.o --depend .\objects\start.d)
+F (.\uart.c)(0x65815D78)(--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections-I.\RTE\_led_c-ID:\software_work\keil5\Keil\STM32F1xx_DFP\2.0.0\Device\Include-ID:\software_work\keil5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DSTM32F10X_HD-o .\objects\uart.o --omf_browse .\objects\uart.crf --depend .\objects\uart.d)
+I (uart.h)(0x65815D78)

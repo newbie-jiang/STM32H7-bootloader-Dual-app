@@ -52,7 +52,8 @@ stm32h750xb\boot.o: ../Core/Inc/usart.h
 stm32h750xb\boot.o: D:\software_work\keil5\ARM\ARMCC\Bin\..\include\stdio.h
 stm32h750xb\boot.o: ../BSP/bsp_sd.h
 stm32h750xb\boot.o: ../Core/Inc/sdmmc.h
-stm32h750xb\boot.o: D:\software_work\keil5\ARM\ARMCC\Bin\..\include\string.h
+stm32h750xb\boot.o: ..\shell\string.h
+stm32h750xb\boot.o: ..\shell\types.h
 stm32h750xb\boot.o: ../FATFS/App/fatfs.h
 stm32h750xb\boot.o: ../Middlewares/Third_Party/FatFs/src/ff.h
 stm32h750xb\boot.o: ../Middlewares/Third_Party/FatFs/src/integer.h
