@@ -1,5 +1,5 @@
 #include "bsp_usart.h" 
-//#include "ring_buffer.h"
+#include "ring_buffer.h"
  
 
 
@@ -7,13 +7,13 @@ extern UART_HandleTypeDef huart4;
 
 
 
-
+static ring_buffer rx_buf;
 
 void uart4_init(void)
 {
   
  //hal库已经做了初始化	
-	
+	ring_buffer_init(&rx_buf);
 }
 
 
@@ -90,6 +90,103 @@ void putstr(const char *str)
 
 
 
+int getchar2(void)
+{
+#if 0
+	USART_TypeDef *usart1 = (USART_TypeDef *)0x40013800;
+	unsigned int status;
+	// while ((usart1->SR & (1<<5)) == 0);
+	do {
+		status = usart1->SR;
+		if (status & (1<<3))
+		{
+			while (1);
+		}
+				
+	} while ((status & (1<<5)) == 0);
+	
+	return usart1->DR;
+#else
+	unsigned char c;
+   FILE * ch;
+	
+//	while (0 != ring_buffer_read(&c, &rx_buf));
+	c=fgetc(ch);
+	
+	return c;
+#endif
+}
+
+int getchar_nowait(void)
+{
+#if 0
+	USART_TypeDef *usart1 = (USART_TypeDef *)0x40013800;
+	unsigned int status;
+	// while ((usart1->SR & (1<<5)) == 0);
+	do {
+		status = usart1->SR;
+		if (status & (1<<3))
+		{
+			while (1);
+		}
+				
+	} while ((status & (1<<5)) == 0);
+	
+	return usart1->DR;
+#else
+	unsigned char c;
+	
+	if (0 == ring_buffer_read(&c, &rx_buf))
+		return -1;
+	
+	return c;
+#endif
+}
+
+
+//int putchar(int c)
+//{
+//	USART_TypeDef *usart1 = (USART_TypeDef *)0x40013800;
+//	while ((usart1->SR & (1<<7)) == 0);
+//	usart1->DR = c;
+//	
+//	return c;
+//}
+
+//void putstr(const char *str)
+//{
+//	while (*str)
+//	{
+//		putchar(*str);
+//		str++;
+//	}
+//}
+
+void putdatas(const char *datas, int len)
+{
+	int i;
+	for (i = 0; i < len; i++)
+	{
+		putchar(datas[i]);
+	}
+}
+
+
+const unsigned char hex_tab[]={'0','1','2','3','4','5','6','7',\
+		                 '8','9','a','b','c','d','e','f'};
+
+void puthex(unsigned int val)
+{
+	/* val: 0x12345678 */
+	int i;
+	int index;
+	putstr("0x");
+	for (i = 7; i >=0 ; i--)
+	{
+		index = (val >> (i*4)) & 0xf;
+		putchar(hex_tab[index]);
+	}
+}
 
 
 

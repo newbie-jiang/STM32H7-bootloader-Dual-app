@@ -275,12 +275,12 @@ size_t zmodem_receive(const char *directory,
 	if (exitcode && !rz->zm->zmodem_requested)
 		zreadline_canit(rz->zm->zr, STDOUT_FILENO);
 	if (exitcode)
-		putstr("Transfer incomplete\r\n");
+		log_info(_("Transfer incomplete"));
 	else
-		putstr("Board Transfer complete\r\n");
+		log_info(_("Transfer complete"));
 	//exit(exitcode);
 
-	return get_file_size();
+	return 0u;
 }
 
 

@@ -44,3 +44,4 @@ stm32h750xb\bsp_usart.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_fmc.h
 stm32h750xb\bsp_usart.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h
 stm32h750xb\bsp_usart.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h
 stm32h750xb\bsp_usart.o: D:\software_work\keil5\ARM\ARMCC\Bin\..\include\stdio.h
+stm32h750xb\bsp_usart.o: ..\shell\ring_buffer.h

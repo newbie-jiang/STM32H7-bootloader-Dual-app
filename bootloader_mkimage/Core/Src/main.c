@@ -92,7 +92,10 @@ void GetFlashSize ( void )
     printf ( "chip flash is:%x \r\n", stm32_Flash_Size );
 }
 
-
+// 清除内存块
+void clearMemory(void *startAddress, size_t size) {
+    memset(startAddress, 0, size);
+}
 
 /* USER CODE END 0 */
 
@@ -131,6 +134,7 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_UART4_Init();
+	uart4_init();
   MX_QUADSPI_Init();
   MX_SDMMC1_SD_Init();
   MX_FATFS_Init();
@@ -141,6 +145,9 @@ int main(void)
 	get_clock();
 	GetChipID();
 	GetFlashSize();
+	uint32_t *memoryStartAddress = (uint32_t *)0x24000000;  // 0x24000000 
+  size_t memorySize = 20 * 1024;  // 20KB
+  clearMemory(memoryStartAddress, memorySize); // 清除内存块
 
 	shell();
 

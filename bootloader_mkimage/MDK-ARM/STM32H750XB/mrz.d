@@ -1,0 +1,10 @@
+stm32h750xb\mrz.o: ..\shell\rz\mrz.c
+stm32h750xb\mrz.o: D:\software_work\keil5\ARM\ARMCC\Bin\..\include\ctype.h
+stm32h750xb\mrz.o: D:\software_work\keil5\ARM\ARMCC\Bin\..\include\stdbool.h
+stm32h750xb\mrz.o: D:\software_work\keil5\ARM\ARMCC\Bin\..\include\stdio.h
+stm32h750xb\mrz.o: D:\software_work\keil5\ARM\ARMCC\Bin\..\include\stdlib.h
+stm32h750xb\mrz.o: D:\software_work\keil5\ARM\ARMCC\Bin\..\include\string.h
+stm32h750xb\mrz.o: ..\shell\rz\zmodem.h
+stm32h750xb\mrz.o: D:\software_work\keil5\ARM\ARMCC\Bin\..\include\stdint.h
+stm32h750xb\mrz.o: ..\shell\command.h
+stm32h750xb\mrz.o: ..\shell\types.h

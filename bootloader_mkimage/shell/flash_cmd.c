@@ -28,6 +28,7 @@
 static int flash_f(int argc, char **argv)
 {
 	struct flash_ops *fp = get_flash();
+	
     unsigned char *buf;
     unsigned int offset;
     unsigned int size = 0;

@@ -14,10 +14,10 @@
 #include "types.h"
 
 struct command {
-  char *name;         //ÃüÁîÃû³Æ
-  char *short_help;   //¶ÌÃüÁîÓï¾ä
-  char *long_help;    //³¤ÃüÁîÓï¾ä
-  int (*function)(int argc, char **argv); //Ö´ĞĞº¯Êı
+  char *name;
+  char *short_help;
+  char *long_help;
+  int (*function)(int argc, char **argv);
 };
 
 struct command ** get_cmds(void);

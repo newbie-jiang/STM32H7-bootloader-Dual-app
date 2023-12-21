@@ -1,6 +1,5 @@
 #include "shell.h"
 
-
 /**
  * This function will set the content of memory to specified value
  *

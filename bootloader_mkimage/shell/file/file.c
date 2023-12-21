@@ -32,9 +32,7 @@ unsigned int sleep(unsigned int seconds)
 
 FILE *fopen2(const char *pathname, const char *mode)
 {
-	extern unsigned int get_download_address(void);
-	
-	g_rcv_st.datas   = (unsigned char *)get_download_address();
+	g_rcv_st.datas   = (unsigned char *)0x24000000;
 	g_rcv_st.offset  = 0;
 	g_rcv_st.st_size = 0;
 	return (FILE *)1;
@@ -60,8 +58,5 @@ int putc2(int c, FILE *stream)
 	return c;
 }
 
-int get_file_size(void)
-{
-	return g_rcv_st.st_size;
-}
+
 

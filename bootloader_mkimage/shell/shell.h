@@ -13,39 +13,36 @@
 
 #include "types.h"
 
-//命令存储字符大小
 #ifndef FINSH_CMD_SIZE
-#define FINSH_CMD_SIZE      100   
+#define FINSH_CMD_SIZE      80
 #endif
 
-//#define FINSH_OPTION_ECHO   0x01
+#define FINSH_OPTION_ECHO   0x01
 
 
-//#define FINSH_PROMPT        finsh_get_prompt()
-//const char* finsh_get_prompt(void);
+#define FINSH_PROMPT        finsh_get_prompt()
+const char* finsh_get_prompt(void);
 int finsh_set_prompt(const char * prompt);
 
-//历史命令个数
-#define FINSH_HISTORY_LINES 5   
+#define FINSH_HISTORY_LINES 5
 
 
 enum input_stat
 {
-    WAIT_NORMAL,    
+    WAIT_NORMAL,
     WAIT_SPEC_KEY,
     WAIT_FUNC_KEY,
 };
-
-
 struct finsh_shell
 {
-    enum input_stat stat;  //输入状态
 
-//    rt_uint8_t echo_mode;
-//    rt_uint8_t prompt_mode;
+    enum input_stat stat;
 
-    rt_uint16_t current_history;  
-    rt_uint16_t history_count;  
+    rt_uint8_t echo_mode:1;
+    rt_uint8_t prompt_mode: 1;
+
+    rt_uint16_t current_history;
+    rt_uint16_t history_count;
 
     char cmd_history[FINSH_HISTORY_LINES][FINSH_CMD_SIZE];
 
@@ -55,17 +52,16 @@ struct finsh_shell
     rt_uint16_t line_curpos;
 };
 
-//void finsh_set_echo(rt_uint32_t echo);
-//rt_uint32_t finsh_get_echo(void);
+void finsh_set_echo(rt_uint32_t echo);
+rt_uint32_t finsh_get_echo(void);
 
 int finsh_system_init(void);
 void finsh_set_device(const char* device_name);
 const char* finsh_get_device(void);
 
-//rt_uint32_t finsh_get_prompt_mode(void);
-//void finsh_set_prompt_mode(rt_uint32_t prompt_mode);
+rt_uint32_t finsh_get_prompt_mode(void);
+void finsh_set_prompt_mode(rt_uint32_t prompt_mode);
 void shell(void);
-
 
 
 #endif

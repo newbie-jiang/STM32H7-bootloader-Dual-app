@@ -1,4 +1,6 @@
 #include "uart.h"
+#include "nvic.h"
+#include "ring_buffer.h"
 
 typedef unsigned int uint32_t;
 typedef struct
@@ -12,17 +14,19 @@ typedef struct
   volatile uint32_t GTPR;  /*!< USART Guard time and prescaler register, Address offset: 0x18 */
 } USART_TypeDef;
 
+static ring_buffer rx_buf;
+
 
 void uart_init(void)
 {
 	USART_TypeDef *usart1 = (USART_TypeDef *)0x40013800;
 	volatile unsigned int *pReg;
-	/* Ê¹ÄÜGPIOA/USART1Ä£¿é */
+	/* ä½¿èƒ½GPIOA/USART1æ¨¡å— */
 	/* RCC_APB2ENR */
 	pReg = (volatile unsigned int *)(0x40021000 + 0x18);
 	*pReg |= (1<<2) | (1<<14);
 	
-	/* ÅäÖÃÒý½Å¹¦ÄÜ: PA9(USART1_TX), PA10(USART1_RX) 
+	/* é…ç½®å¼•è„šåŠŸèƒ½: PA9(USART1_TX), PA10(USART1_RX) 
 	 * GPIOA_CRH = 0x40010800 + 0x04
 	 */
 	pReg = (volatile unsigned int *)(0x40010800 + 0x04);
@@ -35,13 +39,13 @@ void uart_init(void)
 	*pReg &= ~((3<<8) | (3<<10));
 	*pReg |= (0<<8) | (1<<10);  /* Input mode (reset state); Floating input (reset state) */
 	
-	/* ÉèÖÃ²¨ÌØÂÊ
+	/* è®¾ç½®æ³¢ç‰¹çŽ‡
 	 * 115200 = 8000000/16/USARTDIV
 	 * USARTDIV = 4.34
 	 * DIV_Mantissa = 4
 	 * DIV_Fraction / 16 = 0.34
 	 * DIV_Fraction = 16*0.34 = 5
-	 * ÕæÊµ²¨ÌØÂÊ:
+	 * çœŸå®žæ³¢ç‰¹çŽ‡
 	 * DIV_Fraction / 16 = 5/16=0.3125
 	 * USARTDIV = DIV_Mantissa + DIV_Fraction / 16 = 4.3125
 	 * baudrate = 8000000/16/4.3125 = 115942
@@ -50,21 +54,65 @@ void uart_init(void)
 #define DIV_Fraction 5
 	usart1->BRR = (DIV_Mantissa<<4) | (DIV_Fraction);
 	
-	/* ÉèÖÃÊý¾Ý¸ñÊ½: 8n1 */
+	/* è®¾ç½®æ•°æ®æ ¼å¼: 8n1 */
 	usart1->CR1 = (1<<13) | (0<<12) | (0<<10) | (1<<3) | (1<<2);	
 	usart1->CR2 &= ~(3<<12);
 	
-	/* Ê¹ÄÜUSART1 */
-}
-	
-int getchar(void)
-{
-	USART_TypeDef *usart1 = (USART_TypeDef *)0x40013800;
-	while ((usart1->SR & (1<<5)) == 0);
-	return usart1->DR;
+	/* ä½¿èƒ½ä¸­æ–­ */
+	enable_irq(USART1_IRQn);
+
+	/*
+	 * Bit 5 RXNEIE: RXNE interrupt enable
+	 * This bit is set and cleared by software.
+	 *  0: Interrupt is inhibited
+	 *  1: A USART interrupt is generated whenever ORE=1 or RXNE=1 in the USART_SR register	 
+	 */
+	usart1->CR1 |= (1<<5);
+
+	ring_buffer_init(&rx_buf);
 }
 
-int putchar(char c)
+void usart1_txrx(void)
+{
+	USART_TypeDef *usart1 = (USART_TypeDef *)0x40013800;
+
+	if (usart1->SR & (1<<3))
+	{
+		while (1);
+	}
+
+	if (usart1->SR & (1<<5))
+	{
+		ring_buffer_write(usart1->DR, &rx_buf);
+	}
+}
+	
+int getchar2(void)
+{
+#if 0
+	USART_TypeDef *usart1 = (USART_TypeDef *)0x40013800;
+	unsigned int status;
+	// while ((usart1->SR & (1<<5)) == 0);
+	do {
+		status = usart1->SR;
+		if (status & (1<<3))
+		{
+			while (1);
+		}
+				
+	} while ((status & (1<<5)) == 0);
+	
+	return usart1->DR;
+#else
+	unsigned char c;
+	
+	while (0 != ring_buffer_read(&c, &rx_buf));
+	
+	return c;
+#endif
+}
+
+int putchar(int c)
 {
 	USART_TypeDef *usart1 = (USART_TypeDef *)0x40013800;
 	while ((usart1->SR & (1<<7)) == 0);
@@ -81,6 +129,16 @@ void putstr(const char *str)
 		str++;
 	}
 }
+
+void putdatas(const char *datas, int len)
+{
+	int i;
+	for (i = 0; i < len; i++)
+	{
+		putchar(datas[i]);
+	}
+}
+
 
 const unsigned char hex_tab[]={'0','1','2','3','4','5','6','7',\
 		                 '8','9','a','b','c','d','e','f'};

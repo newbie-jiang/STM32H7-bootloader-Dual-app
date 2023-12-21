@@ -1,5 +1,21 @@
 /*
  * Copyright (c) 2006-2021, RT-Thread Development Team
+ *
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * Change Logs:
+ * Date           Author       Notes
+ * 2006-04-30     Bernard      the first version for FinSH
+ * 2006-05-08     Bernard      change finsh thread stack to 2048
+ * 2006-06-03     Bernard      add support for skyeye
+ * 2006-09-24     Bernard      remove the code related with hardware
+ * 2010-01-18     Bernard      fix down then up key bug.
+ * 2010-03-19     Bernard      fix backspace issue and fix device read in shell.
+ * 2010-04-01     Bernard      add prompt output when start and remove the empty history
+ * 2011-02-23     Bernard      fix variable section end issue of finsh shell
+ *                             initialization when use GNU GCC compiler.
+ * 2016-11-26     armink       add password authentication
+ * 2018-07-02     aozima       add custom prompt support.
  */
 
 
@@ -11,14 +27,76 @@
 
 
 struct finsh_shell g_shell;
-#define FINSH_PROMPT   "shell >"
+static char *finsh_prompt_custom = "msh >";
 
+const char *finsh_get_prompt(void)
+{
+    return finsh_prompt_custom;
+}
+
+/**
+ * @ingroup finsh
+ *
+ * This function get the prompt mode of finsh shell.
+ *
+ * @return prompt the prompt mode, 0 disable prompt mode, other values enable prompt mode.
+ */
+rt_uint32_t finsh_get_prompt_mode(void)
+{
+    return g_shell.prompt_mode;
+}
+
+/**
+ * @ingroup finsh
+ *
+ * This function set the prompt mode of finsh shell.
+ *
+ * The parameter 0 disable prompt mode, other values enable prompt mode.
+ *
+ * @param prompt the prompt mode
+ */
+void finsh_set_prompt_mode(rt_uint32_t prompt_mode)
+{
+    g_shell.prompt_mode = prompt_mode;
+}
 
 static int finsh_getchar(void)
 {
-    return getchar();
+    return getchar2();
 }
 
+/**
+ * @ingroup finsh
+ *
+ * This function set the echo mode of finsh shell.
+ *
+ * FINSH_OPTION_ECHO=0x01 is echo mode, other values are none-echo mode.
+ *
+ * @param echo the echo mode
+ */
+void finsh_set_echo(rt_uint32_t echo)
+{
+    g_shell.echo_mode = (rt_uint8_t)echo;
+}
+
+/**
+ * @ingroup finsh
+ *
+ * This function gets the echo mode of finsh shell.
+ *
+ * @return the echo mode
+ */
+rt_uint32_t finsh_get_echo()
+{
+    return g_shell.echo_mode;
+}
+
+
+
+
+//void finsh_run_line(struct finsh_parser *parser, const char *line)
+//{
+//}
 
 static rt_bool_t shell_handle_history(struct finsh_shell *shell)
 {
@@ -34,7 +112,7 @@ static rt_bool_t shell_handle_history(struct finsh_shell *shell)
     putstr("\033[2K\r");
 #endif
     putstr(FINSH_PROMPT);
-	  putstr(g_shell.line);
+	putstr(g_shell.line);
     return RT_FALSE;
 }
 
@@ -79,26 +157,26 @@ static void shell_push_history(struct finsh_shell *shell)
     g_shell.current_history = g_shell.history_count;
 }
 
-
-
 void shell(void)
 {
     int ch;
+
+    /* normal is echo mode */
+    g_shell.echo_mode = 1;
+
     putstr(FINSH_PROMPT);
-	  while (1)
+
+    while (1)
     {
-        ch = finsh_getchar(); //获得输字符
-        if (ch < 0) 
+        ch = finsh_getchar();
+        if (ch < 0)
         {
             continue;
         }
-				
-				
-/*******************************************上下左右箭头***********************************************/
 
         /*
          * handle control key
-         * up key  : 0x1b 0x5b 0x41     
+         * up key  : 0x1b 0x5b 0x41
          * down key: 0x1b 0x5b 0x42
          * right key:0x1b 0x5b 0x43
          * left key: 0x1b 0x5b 0x44
@@ -181,19 +259,14 @@ void shell(void)
                 continue;
             }
         }
-/***************************************************************************************************/		
 
         /* received null or error */
         if (ch == '\0' || ch == 0xFF) continue;
         /* handle tab key */
-        else if (ch == '\t') /* table 键位用于自动补齐命令*/
+        else if (ch == '\t')
         {
-			    /* 未实现 */
-					
+			/* 未实现 */
         }
-				
-				
-/*******************************************删除键backspace******************************************/						
         /* handle backspace key */
         else if (ch == 0x7f || ch == 0x08)
         {
@@ -214,9 +287,9 @@ void shell(void)
                 g_shell.line[g_shell.line_position] = 0;
 
                 //putstr("\b%s  \b", &g_shell.line[g_shell.line_curpos]);
-				        putchar('\b');
-				        putstr(&g_shell.line[g_shell.line_curpos]);
-				        putstr("  \b");
+				putchar('\b');
+				putstr(&g_shell.line[g_shell.line_curpos]);
+				putstr("  \b");
 				
 
                 /* move the cursor to the origin position */
@@ -231,14 +304,12 @@ void shell(void)
 
             continue;
         }
-/***************************************************************************************************/					
-				
 
         /* handle end of line, break */
         if (ch == '\r' || ch == '\n')
         {
             shell_push_history(&g_shell);
-//			if (g_shell.echo_mode)
+			if (g_shell.echo_mode)
 				putstr("\r\n");
 
 			/* 执行命令 */
@@ -263,7 +334,7 @@ void shell(void)
                        &g_shell.line[g_shell.line_curpos],
                        g_shell.line_position - g_shell.line_curpos);
             g_shell.line[g_shell.line_curpos] = ch;
-//            if (g_shell.echo_mode)
+            if (g_shell.echo_mode)
                 putstr(&g_shell.line[g_shell.line_curpos]);
 
             /* move the cursor to new position */
@@ -273,7 +344,7 @@ void shell(void)
         else
         {
             g_shell.line[g_shell.line_position] = ch;
-//            if (g_shell.echo_mode)
+            if (g_shell.echo_mode)
                 putchar(ch);
         }
 

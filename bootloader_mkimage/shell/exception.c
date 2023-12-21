@@ -112,8 +112,10 @@ void SysTick_Handler(void)
 
 void USART1_IRQHandler(void)
 {
-	struct vectors *new_vector = (struct vectors *)(*((unsigned int *)RAM_END));
-	new_vector->USART1_IRQHandler();
+	//struct vectors *new_vector = (struct vectors *)(*((unsigned int *)RAM_END));
+	//new_vector->USART1_IRQHandler();
+	extern void usart1_txrx(void);
+	usart1_txrx();
 }
 
 void USART3_IRQHandler(void)

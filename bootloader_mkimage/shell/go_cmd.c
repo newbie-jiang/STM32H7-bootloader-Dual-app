@@ -33,17 +33,15 @@ static int go_f(int argc, char **argv)
 #else
 //	start_app(0x20000000);
 #endif
-	
-	putstr("go go go is runing\r\n");
 }
 
 struct command go_cmd = {
 	"go",
 		
-	"jump to 0x20000000 to run app\r\n",
+	"jump to 0x20000000 to rum app\r\n",
 	
 	"Usage: \r\n"
-	"       go, jump to 0x20000000 to run app\r\n",
+	"       go, jump to 0x20000000 to rum app\r\n",
 
 	go_f,
 };

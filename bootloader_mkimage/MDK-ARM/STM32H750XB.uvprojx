@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32H750xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32H7xx_HAL_Driver/Inc;../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32H7xx/Include;../Drivers/CMSIS/Include;../BSP;../BOOT;../FATFS/Target;../FATFS/App;../Middlewares/Third_Party/FatFs/src;..\shell;..\shell\rz</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32H7xx_HAL_Driver/Inc;../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32H7xx/Include;../Drivers/CMSIS/Include;../BSP;../BOOT;../FATFS/Target;../FATFS/App;../Middlewares/Third_Party/FatFs/src;..\shell;..\shell\rz;..\shell\file</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -1029,6 +1029,16 @@
               <FileName>bsp_key.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\BSP\bsp_key.c</FilePath>
+            </File>
+            <File>
+              <FileName>ring_buffer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\shell\ring_buffer.c</FilePath>
+            </File>
+            <File>
+              <FileName>string.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\shell\string.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1810,6 +1820,51 @@
               <FileName>go_cmd.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\shell\go_cmd.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>rz</GroupName>
+          <Files>
+            <File>
+              <FileName>crctab.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\shell\rz\crctab.c</FilePath>
+            </File>
+            <File>
+              <FileName>lrz.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\shell\rz\lrz.c</FilePath>
+            </File>
+            <File>
+              <FileName>mrz.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\shell\rz\mrz.c</FilePath>
+            </File>
+            <File>
+              <FileName>rbsb.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\shell\rz\rbsb.c</FilePath>
+            </File>
+            <File>
+              <FileName>zm.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\shell\rz\zm.c</FilePath>
+            </File>
+            <File>
+              <FileName>zreadline.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\shell\rz\zreadline.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>file</GroupName>
+          <Files>
+            <File>
+              <FileName>file.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\shell\file\file.c</FilePath>
             </File>
           </Files>
         </Group>

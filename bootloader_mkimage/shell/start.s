@@ -114,8 +114,8 @@ start_app   PROC
 				EXPORT  start_app
 
 				; set vector base address as 0x08040000
-				;ldr r3, =0xE000ED08
-				;str r0, [r3]
+				ldr r3, =0xE000ED08
+				str r0, [r3]
 				
 				ldr sp, [r0]      ; read val from new vector
 				ldr r1, [r0, #4]  ; read val from "new vector + 4“
