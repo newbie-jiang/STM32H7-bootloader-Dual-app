@@ -1806,6 +1806,11 @@
               <FileType>1</FileType>
               <FilePath>..\shell\help_cmd.c</FilePath>
             </File>
+            <File>
+              <FileName>go_cmd.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\shell\go_cmd.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

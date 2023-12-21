@@ -1,6 +1,6 @@
 Dependencies for Project 'STM32H750XB', Target 'STM32H750XB': (DO NOT MODIFY !)
 F (startup_stm32h750xx.s)(0x6581B3BE)(--cpu Cortex-M7.fp.dp -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_STM32H750XB-ID:\software_work\keil5\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\software_work\keil5\Keil\STM32H7xx_DFP\3.0.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include--pd "__UVISION_VERSION SETA 528" --pd "_RTE_ SETA 1" --pd "STM32H750xx SETA 1"--list startup_stm32h750xx.lst --xref -o stm32h750xb\startup_stm32h750xx.o --depend stm32h750xb\startup_stm32h750xx.d)
-F (../Core/Src/main.c)(0x65830E4A)(--c99 --gnu -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../BOOT -I ../FATFS/Target -I ../FATFS/App -I ../Middlewares/Third_Party/FatFs/src -I ..\shell -I ..\shell\rz-I.\RTE\_STM32H750XB-ID:\software_work\keil5\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\software_work\keil5\Keil\STM32H7xx_DFP\3.0.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32H750xx -DUSE_HAL_DRIVER -DSTM32H750xx-o stm32h750xb\main.o --depend stm32h750xb\main.d)
+F (../Core/Src/main.c)(0x6584283F)(--c99 --gnu -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../BOOT -I ../FATFS/Target -I ../FATFS/App -I ../Middlewares/Third_Party/FatFs/src -I ..\shell -I ..\shell\rz-I.\RTE\_STM32H750XB-ID:\software_work\keil5\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\software_work\keil5\Keil\STM32H7xx_DFP\3.0.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32H750xx -DUSE_HAL_DRIVER -DSTM32H750xx-o stm32h750xb\main.o --depend stm32h750xb\main.d)
 I (../Core/Inc/main.h)(0x6581B3BE)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h)(0x6581B3BE)
 I (../Core/Inc/stm32h7xx_hal_conf.h)(0x6581B3BE)
@@ -58,7 +58,7 @@ I (../Core/Inc/usart.h)(0x6581B3BE)
 I (../Core/Inc/gpio.h)(0x6581B3BE)
 I (../Core/Inc/fmc.h)(0x6581B3BE)
 I (../BOOT/boot.h)(0x6582EBE2)
-I (..\shell\shell.h)(0x658315A6)
+I (..\shell\shell.h)(0x65841164)
 I (..\shell\types.h)(0x65815D78)
 I (../BSP/bsp_usart.h)(0x65830A43)
 I (D:\software_work\keil5\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
@@ -1834,7 +1834,7 @@ I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_sdram.h)(0x6581B3BE)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_fmc.h)(0x6581B3BE)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h)(0x6581B3BE)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h)(0x6581B3BE)
-F (..\BOOT\boot.c)(0x6582F609)(--c99 --gnu -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../BOOT -I ../FATFS/Target -I ../FATFS/App -I ../Middlewares/Third_Party/FatFs/src -I ..\shell -I ..\shell\rz-I.\RTE\_STM32H750XB-ID:\software_work\keil5\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\software_work\keil5\Keil\STM32H7xx_DFP\3.0.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32H750xx -DUSE_HAL_DRIVER -DSTM32H750xx-o stm32h750xb\boot.o --depend stm32h750xb\boot.d)
+F (..\BOOT\boot.c)(0x65841E3D)(--c99 --gnu -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../BOOT -I ../FATFS/Target -I ../FATFS/App -I ../Middlewares/Third_Party/FatFs/src -I ..\shell -I ..\shell\rz-I.\RTE\_STM32H750XB-ID:\software_work\keil5\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\software_work\keil5\Keil\STM32H7xx_DFP\3.0.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32H750xx -DUSE_HAL_DRIVER -DSTM32H750xx-o stm32h750xb\boot.o --depend stm32h750xb\boot.d)
 I (..\BOOT\boot.h)(0x6582EBE2)
 I (D:\software_work\keil5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
 I (../BSP/bsp_qspi.h)(0x6581B3BE)
@@ -2337,25 +2337,29 @@ I (../FATFS/Target/bsp_driver_sd.h)(0x6581B3BE)
 I (../FATFS/Target/fatfs_platform.h)(0x6581B3BE)
 I (D:\software_work\keil5\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
 F (..\BOOT\config.h)(0x6582F6CF)()
-F (..\shell\shell.c)(0x658316AF)(--c99 --gnu -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../BOOT -I ../FATFS/Target -I ../FATFS/App -I ../Middlewares/Third_Party/FatFs/src -I ..\shell -I ..\shell\rz-I.\RTE\_STM32H750XB-ID:\software_work\keil5\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\software_work\keil5\Keil\STM32H7xx_DFP\3.0.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32H750xx -DUSE_HAL_DRIVER -DSTM32H750xx-o stm32h750xb\shell.o --depend stm32h750xb\shell.d)
-I (..\shell\shell.h)(0x658315A6)
+F (..\shell\shell.c)(0x65841781)(--c99 --gnu -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../BOOT -I ../FATFS/Target -I ../FATFS/App -I ../Middlewares/Third_Party/FatFs/src -I ..\shell -I ..\shell\rz-I.\RTE\_STM32H750XB-ID:\software_work\keil5\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\software_work\keil5\Keil\STM32H7xx_DFP\3.0.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32H750xx -DUSE_HAL_DRIVER -DSTM32H750xx-o stm32h750xb\shell.o --depend stm32h750xb\shell.d)
+I (..\shell\shell.h)(0x65841164)
 I (..\shell\types.h)(0x65815D78)
 I (..\shell\uart.h)(0x65815D78)
 I (..\shell\string.h)(0x65815D78)
 I (..\shell\parser.h)(0x65815D78)
 F (..\shell\string.c)(0x6583167E)(--c99 --gnu -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../BOOT -I ../FATFS/Target -I ../FATFS/App -I ../Middlewares/Third_Party/FatFs/src -I ..\shell -I ..\shell\rz-I.\RTE\_STM32H750XB-ID:\software_work\keil5\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\software_work\keil5\Keil\STM32H7xx_DFP\3.0.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32H750xx -DUSE_HAL_DRIVER -DSTM32H750xx-o stm32h750xb\string.o --depend stm32h750xb\string.d)
-I (..\shell\shell.h)(0x658315A6)
+I (..\shell\shell.h)(0x65841164)
 I (..\shell\types.h)(0x65815D78)
 F (..\shell\parser.c)(0x658316C4)(--c99 --gnu -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../BOOT -I ../FATFS/Target -I ../FATFS/App -I ../Middlewares/Third_Party/FatFs/src -I ..\shell -I ..\shell\rz-I.\RTE\_STM32H750XB-ID:\software_work\keil5\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\software_work\keil5\Keil\STM32H7xx_DFP\3.0.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32H750xx -DUSE_HAL_DRIVER -DSTM32H750xx-o stm32h750xb\parser.o --depend stm32h750xb\parser.d)
 I (..\shell\types.h)(0x65815D78)
 I (..\shell\uart.h)(0x65815D78)
 I (..\shell\command.h)(0x65830F85)
 I (..\shell\string.h)(0x65815D78)
-F (..\shell\command.c)(0x658316F1)(--c99 --gnu -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../BOOT -I ../FATFS/Target -I ../FATFS/App -I ../Middlewares/Third_Party/FatFs/src -I ..\shell -I ..\shell\rz-I.\RTE\_STM32H750XB-ID:\software_work\keil5\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\software_work\keil5\Keil\STM32H7xx_DFP\3.0.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32H750xx -DUSE_HAL_DRIVER -DSTM32H750xx-o stm32h750xb\command.o --depend stm32h750xb\command.d)
+F (..\shell\command.c)(0x658418A1)(--c99 --gnu -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../BOOT -I ../FATFS/Target -I ../FATFS/App -I ../Middlewares/Third_Party/FatFs/src -I ..\shell -I ..\shell\rz-I.\RTE\_STM32H750XB-ID:\software_work\keil5\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\software_work\keil5\Keil\STM32H7xx_DFP\3.0.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32H750xx -DUSE_HAL_DRIVER -DSTM32H750xx-o stm32h750xb\command.o --depend stm32h750xb\command.d)
 I (..\shell\command.h)(0x65830F85)
 I (..\shell\types.h)(0x65815D78)
 I (..\shell\string.h)(0x65815D78)
-F (..\shell\help_cmd.c)(0x658316E2)(--c99 --gnu -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../BOOT -I ../FATFS/Target -I ../FATFS/App -I ../Middlewares/Third_Party/FatFs/src -I ..\shell -I ..\shell\rz-I.\RTE\_STM32H750XB-ID:\software_work\keil5\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\software_work\keil5\Keil\STM32H7xx_DFP\3.0.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32H750xx -DUSE_HAL_DRIVER -DSTM32H750xx-o stm32h750xb\help_cmd.o --depend stm32h750xb\help_cmd.d)
+F (..\shell\help_cmd.c)(0x658316FB)(--c99 --gnu -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../BOOT -I ../FATFS/Target -I ../FATFS/App -I ../Middlewares/Third_Party/FatFs/src -I ..\shell -I ..\shell\rz-I.\RTE\_STM32H750XB-ID:\software_work\keil5\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\software_work\keil5\Keil\STM32H7xx_DFP\3.0.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32H750xx -DUSE_HAL_DRIVER -DSTM32H750xx-o stm32h750xb\help_cmd.o --depend stm32h750xb\help_cmd.d)
+I (..\shell\command.h)(0x65830F85)
+I (..\shell\types.h)(0x65815D78)
+I (..\shell\uart.h)(0x65815D78)
+F (..\shell\go_cmd.c)(0x65841835)(--c99 --gnu -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include -I ../BSP -I ../BOOT -I ../FATFS/Target -I ../FATFS/App -I ../Middlewares/Third_Party/FatFs/src -I ..\shell -I ..\shell\rz-I.\RTE\_STM32H750XB-ID:\software_work\keil5\ARM\CMSIS\5.9.0\CMSIS\Core\Include-ID:\software_work\keil5\Keil\STM32H7xx_DFP\3.0.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="528" -D_RTE_ -DSTM32H750xx -DUSE_HAL_DRIVER -DSTM32H750xx-o stm32h750xb\go_cmd.o --depend stm32h750xb\go_cmd.d)
 I (..\shell\command.h)(0x65830F85)
 I (..\shell\types.h)(0x65815D78)
 I (..\shell\uart.h)(0x65815D78)

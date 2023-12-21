@@ -21,8 +21,8 @@
 //#define FINSH_OPTION_ECHO   0x01
 
 
-#define FINSH_PROMPT        finsh_get_prompt()
-const char* finsh_get_prompt(void);
+//#define FINSH_PROMPT        finsh_get_prompt()
+//const char* finsh_get_prompt(void);
 int finsh_set_prompt(const char * prompt);
 
 //历史命令个数
@@ -65,6 +65,7 @@ const char* finsh_get_device(void);
 //rt_uint32_t finsh_get_prompt_mode(void);
 //void finsh_set_prompt_mode(rt_uint32_t prompt_mode);
 void shell(void);
+
 
 
 #endif

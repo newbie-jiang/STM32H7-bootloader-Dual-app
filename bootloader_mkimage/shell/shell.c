@@ -11,20 +11,13 @@
 
 
 struct finsh_shell g_shell;
-
-static char *finsh_prompt_custom = "shell >";
-
-const char *finsh_get_prompt(void)
-{
-    return finsh_prompt_custom;
-}
+#define FINSH_PROMPT   "shell >"
 
 
 static int finsh_getchar(void)
 {
     return getchar();
 }
-
 
 
 static rt_bool_t shell_handle_history(struct finsh_shell *shell)
@@ -41,7 +34,7 @@ static rt_bool_t shell_handle_history(struct finsh_shell *shell)
     putstr("\033[2K\r");
 #endif
     putstr(FINSH_PROMPT);
-	putstr(g_shell.line);
+	  putstr(g_shell.line);
     return RT_FALSE;
 }
 
@@ -88,29 +81,24 @@ static void shell_push_history(struct finsh_shell *shell)
 
 
 
-
-
-
 void shell(void)
 {
     int ch;
-
-    /* normal is echo mode */
-//    g_shell.echo_mode = 1;
-
     putstr(FINSH_PROMPT);
-
-    while (1)
+	  while (1)
     {
-        ch = finsh_getchar();
-        if (ch < 0)
+        ch = finsh_getchar(); //获得输字符
+        if (ch < 0) 
         {
             continue;
         }
+				
+				
+/*******************************************上下左右箭头***********************************************/
 
         /*
          * handle control key
-         * up key  : 0x1b 0x5b 0x41
+         * up key  : 0x1b 0x5b 0x41     
          * down key: 0x1b 0x5b 0x42
          * right key:0x1b 0x5b 0x43
          * left key: 0x1b 0x5b 0x44
@@ -193,14 +181,19 @@ void shell(void)
                 continue;
             }
         }
+/***************************************************************************************************/		
 
         /* received null or error */
         if (ch == '\0' || ch == 0xFF) continue;
         /* handle tab key */
-        else if (ch == '\t')
+        else if (ch == '\t') /* table 键位用于自动补齐命令*/
         {
-			/* 未实现 */
+			    /* 未实现 */
+					
         }
+				
+				
+/*******************************************删除键backspace******************************************/						
         /* handle backspace key */
         else if (ch == 0x7f || ch == 0x08)
         {
@@ -221,9 +214,9 @@ void shell(void)
                 g_shell.line[g_shell.line_position] = 0;
 
                 //putstr("\b%s  \b", &g_shell.line[g_shell.line_curpos]);
-				putchar('\b');
-				putstr(&g_shell.line[g_shell.line_curpos]);
-				putstr("  \b");
+				        putchar('\b');
+				        putstr(&g_shell.line[g_shell.line_curpos]);
+				        putstr("  \b");
 				
 
                 /* move the cursor to the origin position */
@@ -238,6 +231,8 @@ void shell(void)
 
             continue;
         }
+/***************************************************************************************************/					
+				
 
         /* handle end of line, break */
         if (ch == '\r' || ch == '\n')

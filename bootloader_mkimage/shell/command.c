@@ -8,9 +8,11 @@
 #include "string.h"
 
 extern struct command help_cmd;
+extern struct command go_cmd;
 
 static struct command * g_commands[] = {
 	&help_cmd,
+	&go_cmd,
 	NULL
 };
 

@@ -62,6 +62,38 @@ void SystemClock_Config(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
+void  get_clock(void){
+ uint32_t GetSysClockFreq =  HAL_RCC_GetSysClockFreq();
+ uint32_t GetHCLKFreq     =  HAL_RCC_GetHCLKFreq();
+ uint32_t GetPCLK1Freq    =  HAL_RCC_GetPCLK1Freq();
+ uint32_t PCLK2Freq       =  HAL_RCC_GetPCLK2Freq();
+ printf("SysClockFreq = %uHZ\r\n",GetSysClockFreq);
+ printf("HCLKFreq     = %uHZ\r\n",GetHCLKFreq);
+ printf("PCLK1Freq    = %uHZ\r\n",GetPCLK1Freq);
+ printf("PCLK2Freq    = %uHZ\r\n",PCLK2Freq);
+}
+
+
+
+//读取芯片ID
+void GetChipID ( void )
+{
+    uint32_t CpuID[3];							//小端模式
+    CpuID[0] = * ( __IO uint32_t * ) ( 0x1FF1E800 ); //高32位地址
+    CpuID[1] = * ( __IO uint32_t * ) ( 0x1FF1E800+0X4 ); //中32位地址
+    CpuID[2] = * ( __IO uint32_t * ) ( 0x1FF1E800+0X8 ); //低32位地址
+    printf ( "chip id is：0x%x-%x-%x \r\n", CpuID[0], CpuID[1], CpuID[2] );
+}
+//获取芯片Flash大小
+void GetFlashSize ( void )
+{
+    uint16_t stm32_Flash_Size;
+    stm32_Flash_Size = * ( uint16_t * ) ( 0x1FF1E880 ); //闪存容量寄存器
+    printf ( "chip flash is:%x \r\n", stm32_Flash_Size );
+}
+
+
+
 /* USER CODE END 0 */
 
 /**
@@ -106,7 +138,12 @@ int main(void)
   /* USER CODE BEGIN 2 */
 //  jump_to_qspi_flash();
 	putstr("\r\nbootloader\r\n");
+	get_clock();
+	GetChipID();
+	GetFlashSize();
+
 	shell();
+
   /* USER CODE END 2 */
 
   /* Infinite loop */

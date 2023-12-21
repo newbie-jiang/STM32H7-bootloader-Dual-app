@@ -33,6 +33,8 @@ static int go_f(int argc, char **argv)
 #else
 //	start_app(0x20000000);
 #endif
+	
+	putstr("go go go is runing\r\n");
 }
 
 struct command go_cmd = {

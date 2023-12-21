@@ -21,6 +21,10 @@
 
 
 
+
+
+
+
 uint32_t calculate_crc32(const void *data, size_t size);
   
 
@@ -1209,6 +1213,23 @@ uint32_t calculate_crc32(const void *data, size_t size) {
     }
 
     return ~crc;
+}
+
+
+
+
+void get_chpi_information(void)
+{
+	//获取芯片id
+	//获取时钟频率（主时钟，总线时钟）
+	
+
+
+
+
+
+
+
 }
 
 

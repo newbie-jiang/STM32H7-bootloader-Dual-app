@@ -58,6 +58,7 @@
 "stm32h750xb\parser.o"
 "stm32h750xb\command.o"
 "stm32h750xb\help_cmd.o"
+"stm32h750xb\go_cmd.o"
 --library_type=microlib --strict --scatter "STM32H750XB\STM32H750XB.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
