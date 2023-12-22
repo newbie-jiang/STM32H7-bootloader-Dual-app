@@ -60,4 +60,11 @@ int putc2(int c, FILE *stream)
 }
 
 
+int get_file_size(void){
+
+return g_rcv_st.st_size;
+
+}
+
+
 

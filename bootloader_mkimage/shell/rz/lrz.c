@@ -280,7 +280,8 @@ size_t zmodem_receive(const char *directory,
 		log_info(_("Transfer complete"));
 	//exit(exitcode);
 
-	return 0u;
+//	return 0u;
+	return get_file_size();;
 }
 
 

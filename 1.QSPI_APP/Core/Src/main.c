@@ -67,11 +67,11 @@ void SystemClock_Config(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-  SCB->VTOR = 0x90000000; //app1
+//  SCB->VTOR = 0x90000000; //app1
 	
 //	SCB->VTOR = 0x90400000; //app2
 	
-	__enable_irq();
+//	__enable_irq();
 	
   /* USER CODE END 1 */
 

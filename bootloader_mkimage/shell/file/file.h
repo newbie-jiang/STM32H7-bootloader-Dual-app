@@ -144,7 +144,7 @@ size_t fwrite2(const void *ptr, size_t size, size_t nmemb,
 
 int putc2(int c, FILE *stream);
 
-
+int get_file_size(void);
 #endif
 
 
