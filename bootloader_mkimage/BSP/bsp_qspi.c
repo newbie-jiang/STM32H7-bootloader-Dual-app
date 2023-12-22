@@ -840,5 +840,64 @@ int8_t QSPI_W25Qxx_ReadBuffer(uint8_t* pBuffer, uint32_t ReadAddr, uint32_t NumB
 
 //	实验平台：反客STM32H750XBH6核心板 （型号：FK750M4-XBH6）
 
+
+
+
+static unsigned int qspi_flash_read(unsigned char *buf, unsigned int offset, unsigned int size)
+{
+
+}
+
+static unsigned int qspi_flash_write(unsigned char *buf, unsigned int offset, unsigned int size)
+{
+   
+
+   
+}
+
+
+static unsigned int qspi_flash_erase(unsigned int offset, unsigned int size)
+{
+  	
+}
+
+
+static struct flash_ops stm32_flash = {
+    "stm32_flash",
+     qspi_flash_read,
+     qspi_flash_write,
+     qspi_flash_erase,
+};
+
+struct flash_ops *get_flash(void)
+{
+    return &stm32_flash;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /********************************************************************************************************************************************************************************************************FANKE**********/
 

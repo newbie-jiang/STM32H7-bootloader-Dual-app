@@ -1,21 +1,5 @@
 /*
  * Copyright (c) 2006-2021, RT-Thread Development Team
- *
- * SPDX-License-Identifier: Apache-2.0
- *
- * Change Logs:
- * Date           Author       Notes
- * 2006-04-30     Bernard      the first version for FinSH
- * 2006-05-08     Bernard      change finsh thread stack to 2048
- * 2006-06-03     Bernard      add support for skyeye
- * 2006-09-24     Bernard      remove the code related with hardware
- * 2010-01-18     Bernard      fix down then up key bug.
- * 2010-03-19     Bernard      fix backspace issue and fix device read in shell.
- * 2010-04-01     Bernard      add prompt output when start and remove the empty history
- * 2011-02-23     Bernard      fix variable section end issue of finsh shell
- *                             initialization when use GNU GCC compiler.
- * 2016-11-26     armink       add password authentication
- * 2018-07-02     aozima       add custom prompt support.
  */
 
 
@@ -24,6 +8,34 @@
 #include "uart.h"
 #include "string.h"
 #include "flash_cmd.h"
+
+
+unsigned int str2hex(const char* s)
+{
+	unsigned int sum=0;
+    unsigned char c;
+    unsigned int val;
+	while ( *s == ' '  ||  *s == '\t') s++;
+
+    if (*s == '0')s++;
+    if (*s == 'x')s++;
+    if (*s == 'X')s++;    
+
+    c = *s;
+	while (c)
+	{
+        if (c >= '0' && c <= '9')
+            val = c - '0';
+        else if (c >= 'a' && c <= 'z')
+            val = c - 'a' + 10;
+        else if (c >= 'A' && c <= 'Z')
+            val = c - 'A' + 10;
+		sum = sum * 16 + val;
+		++s;
+        c = *s;
+	}
+	return sum;
+}
 
 static int flash_f(int argc, char **argv)
 {

@@ -4,6 +4,19 @@
 #include "stm32h7xx_hal.h"
 #include "quadspi.h" 
 
+
+
+
+typedef struct flash_ops {
+  char *name;
+  unsigned int (*read)(unsigned char *buf, unsigned int offset, unsigned int size);
+  unsigned int (*write)(unsigned char *buf, unsigned int offset, unsigned int size);
+  unsigned int (*erase)(unsigned int offset, unsigned int size);
+}flash_ops;
+
+
+struct flash_ops *get_flash(void);
+
 /*----------------------------------------------- 命名参数宏 -------------------------------------------*/
 
 #define QSPI_W25Qxx_OK           		0		// W25Qxx通信正常

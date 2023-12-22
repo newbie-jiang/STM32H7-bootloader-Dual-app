@@ -15,7 +15,7 @@ extern struct command clear_cmd;
 extern struct command reboot_cmd;
 extern struct command sevent_cmd;
 extern struct command printeven_cmd;
-
+extern struct command flash_cmd;
 
 static struct command * g_commands[] = {
 	&help_cmd,
@@ -26,6 +26,7 @@ static struct command * g_commands[] = {
 	&reboot_cmd,
 	&printeven_cmd,
 	&sevent_cmd,
+	&flash_cmd,
 	
 	NULL
 };

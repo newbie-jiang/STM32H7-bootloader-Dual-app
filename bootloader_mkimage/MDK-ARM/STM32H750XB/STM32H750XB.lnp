@@ -65,6 +65,7 @@
 "stm32h750xb\clear_cmd.o"
 "stm32h750xb\reboot_cmd.o"
 "stm32h750xb\setenv_cmd.o"
+"stm32h750xb\flash_cmd.o"
 "stm32h750xb\crctab.o"
 "stm32h750xb\lrz.o"
 "stm32h750xb\mrz.o"

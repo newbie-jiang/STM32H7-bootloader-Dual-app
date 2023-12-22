@@ -1841,6 +1841,11 @@
               <FileType>1</FileType>
               <FilePath>..\shell\setenv_cmd.c</FilePath>
             </File>
+            <File>
+              <FileName>flash_cmd.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\shell\flash_cmd.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
