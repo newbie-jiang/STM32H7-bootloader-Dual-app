@@ -34,6 +34,7 @@
 #include <string.h>
 
 #include "log.h"
+//#include "bsp_usart.h"
 
 /* Ward Christensen / CP/M parameters - Don't change these! */
 #define TIMEOUT (-2)

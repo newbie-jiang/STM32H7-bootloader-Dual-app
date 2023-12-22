@@ -27,9 +27,13 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include <string.h>
 #include "boot.h"
 #include "shell.h"
 #include "bsp_usart.h"
+#include "bsp_sdram.h"
+
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -89,13 +93,18 @@ void GetFlashSize ( void )
 {
     uint16_t stm32_Flash_Size;
     stm32_Flash_Size = * ( uint16_t * ) ( 0x1FF1E880 ); //闪存容量寄存器
-    printf ( "chip flash is:%x \r\n", stm32_Flash_Size );
+	printf ( "chip flash is: %x \r\n", stm32_Flash_Size );
 }
 
 // 清除内存块
 void clearMemory(void *startAddress, size_t size) {
     memset(startAddress, 0, size);
 }
+
+
+
+
+
 
 /* USER CODE END 0 */
 
@@ -145,9 +154,12 @@ int main(void)
 	get_clock();
 	GetChipID();
 	GetFlashSize();
-	uint32_t *memoryStartAddress = (uint32_t *)0x24000000;  // 0x24000000 
-  size_t memorySize = 20 * 1024;  // 20KB
-  clearMemory(memoryStartAddress, memorySize); // 清除内存块
+	bsp_sdram_init();
+//	uint32_t *memoryStartAddress = (uint32_t *)0x24000000;  // 0x24000000 
+//  size_t memorySize = 20 * 1024;  // 20KB
+//  clearMemory(memoryStartAddress, memorySize); // 清除内存块
+	// 数据起始地址
+   
 
 	shell();
 

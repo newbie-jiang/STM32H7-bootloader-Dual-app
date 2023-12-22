@@ -22,13 +22,22 @@ Dialog DLL:      TCM.DLL V1.36.2.0
  
 <h2>Project:</h2>
 F:\DeskTop\stm32h7bootloader\STM32H7-bootloader-Dual-app\bootloader_mkimage\MDK-ARM\STM32H750XB.uvprojx
-Project File Date:  12/21/2023
+Project File Date:  12/22/2023
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\software_work\keil5\ARM\ARMCC\Bin'
 Build target 'STM32H750XB'
+compiling setenv_cmd.c...
+..\shell\setenv_cmd.c(36): warning:  #223-D: function "strcmp" declared implicitly
+      if (strcmp(parameter_name, "para1") == 0) {
+..\shell\setenv_cmd.c: 1 warning, 0 errors
+linking...
+STM32H750XB\STM32H750XB.axf: Warning: L6304W: Duplicate input file stm32h750xb\string_1.o ignored.
+Program Size: Code=30312 RO-data=1528 RW-data=1792 ZI-data=4912  
+Finished: 0 information, 1 warning and 0 error messages.
+FromELF: creating hex file...
 After Build - User command #1: D:\software_work\keil5\ARM\ARMCC\bin\fromelf.exe  --bin -o  ./STM32H750XB/STM32H750XB.bin  ./STM32H750XB/STM32H750XB.axf
-"STM32H750XB\STM32H750XB.axf" - 0 Error(s), 0 Warning(s).
+"STM32H750XB\STM32H750XB.axf" - 0 Error(s), 2 Warning(s).
 
 <h2>Software Packages used:</h2>
 

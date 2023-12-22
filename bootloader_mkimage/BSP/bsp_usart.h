@@ -12,5 +12,6 @@ void uart1_dma_init(void);
 void bsp_debug_uart4_init(void);
 void putstr(const char *str);
 
+int getchar2(void);
 #endif /*__USART_H*/
 

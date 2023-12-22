@@ -1821,6 +1821,26 @@
               <FileType>1</FileType>
               <FilePath>..\shell\go_cmd.c</FilePath>
             </File>
+            <File>
+              <FileName>crc32_cmd.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\shell\crc32_cmd.c</FilePath>
+            </File>
+            <File>
+              <FileName>clear_cmd.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\shell\clear_cmd.c</FilePath>
+            </File>
+            <File>
+              <FileName>reboot_cmd.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\shell\reboot_cmd.c</FilePath>
+            </File>
+            <File>
+              <FileName>setenv_cmd.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\shell\setenv_cmd.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

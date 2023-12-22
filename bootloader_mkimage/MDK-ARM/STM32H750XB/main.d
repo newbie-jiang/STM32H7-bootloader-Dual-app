@@ -56,8 +56,10 @@ stm32h750xb\main.o: ../Core/Inc/sdmmc.h
 stm32h750xb\main.o: ../Core/Inc/usart.h
 stm32h750xb\main.o: ../Core/Inc/gpio.h
 stm32h750xb\main.o: ../Core/Inc/fmc.h
+stm32h750xb\main.o: D:\software_work\keil5\ARM\ARMCC\Bin\..\include\string.h
 stm32h750xb\main.o: ../BOOT/boot.h
 stm32h750xb\main.o: ..\shell\shell.h
 stm32h750xb\main.o: ..\shell\types.h
 stm32h750xb\main.o: ../BSP/bsp_usart.h
 stm32h750xb\main.o: D:\software_work\keil5\ARM\ARMCC\Bin\..\include\stdio.h
+stm32h750xb\main.o: ../BSP/bsp_sdram.h
