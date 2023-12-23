@@ -27,6 +27,8 @@ stm32h750xb\bsp_usart.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dma_e
 stm32h750xb\bsp_usart.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_mdma.h
 stm32h750xb\bsp_usart.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_exti.h
 stm32h750xb\bsp_usart.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_cortex.h
+stm32h750xb\bsp_usart.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_crc.h
+stm32h750xb\bsp_usart.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_crc_ex.h
 stm32h750xb\bsp_usart.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h
 stm32h750xb\bsp_usart.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash_ex.h
 stm32h750xb\bsp_usart.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hsem.h
@@ -44,4 +46,4 @@ stm32h750xb\bsp_usart.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_fmc.h
 stm32h750xb\bsp_usart.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h
 stm32h750xb\bsp_usart.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h
 stm32h750xb\bsp_usart.o: D:\software_work\keil5\ARM\ARMCC\Bin\..\include\stdio.h
-stm32h750xb\bsp_usart.o: ..\shell\ring_buffer.h
+stm32h750xb\bsp_usart.o: ../shell/ring_buffer.h

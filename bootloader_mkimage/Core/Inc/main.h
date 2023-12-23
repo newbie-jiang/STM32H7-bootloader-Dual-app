@@ -67,6 +67,8 @@ void Error_Handler(void);
 #define QSPI_CS_W25Q64_GPIO_Port GPIOG
 #define UART4_TX_Pin GPIO_PIN_0
 #define UART4_TX_GPIO_Port GPIOA
+#define test_io_Pin GPIO_PIN_2
+#define test_io_GPIO_Port GPIOB
 #define SD_CAP_Pin GPIO_PIN_12
 #define SD_CAP_GPIO_Port GPIOB
 

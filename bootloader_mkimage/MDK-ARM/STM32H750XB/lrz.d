@@ -18,4 +18,4 @@ stm32h750xb\lrz.o: D:\software_work\keil5\ARM\ARMCC\Bin\..\include\stdbool.h
 stm32h750xb\lrz.o: ..\shell\rz\crctab.h
 stm32h750xb\lrz.o: ..\shell\rz\zm.h
 stm32h750xb\lrz.o: ..\shell\rz\_zmodem.h
-stm32h750xb\lrz.o: ..\shell\file\file.h
+stm32h750xb\lrz.o: ../shell/file/file.h

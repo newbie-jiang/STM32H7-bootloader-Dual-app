@@ -18,6 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "crc.h"
 #include "fatfs.h"
 #include "quadspi.h"
 #include "sdmmc.h"
@@ -143,11 +144,11 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_UART4_Init();
-	uart4_init();
   MX_QUADSPI_Init();
   MX_SDMMC1_SD_Init();
   MX_FATFS_Init();
   MX_FMC_Init();
+  MX_CRC_Init();
   /* USER CODE BEGIN 2 */
 //  jump_to_qspi_flash();
 	putstr("\r\nbootloader\r\n");
@@ -156,12 +157,13 @@ int main(void)
 	GetFlashSize();
 	bsp_sdram_init();
 //	uint32_t *memoryStartAddress = (uint32_t *)0x24000000;  // 0x24000000 
-//  size_t memorySize = 20 * 1024;  // 20KB
+//  size_t memorySize = ;  // 20KB
 //  clearMemory(memoryStartAddress, memorySize); // 清除内存块
 	// 数据起始地址
-   
-
-	shell();
+//   size_t hardwarecrc1 = HAL_CRC_Accumulate(&hcrc,memoryStartAddress,memorySize);
+//   size_t hardwarecrc2 = HAL_CRC_Calculate(&hcrc,memoryStartAddress,memorySize);
+//	 
+	 shell();
 
   /* USER CODE END 2 */
 
@@ -170,7 +172,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-  
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

@@ -2,7 +2,7 @@
 #include "command.h"
 #include "uart.h"
 #include "stdio.h"
-
+#include "crc.h"
 
 #define CRC32_POLYNOMIAL 0xEDB88320u
 //传入参数：                   数据首地址     数据大小
@@ -32,6 +32,7 @@ static int crc32(int argc, char **argv) {
     // 从命令行参数中获取起始地址和大小
     uint32_t dataStartAddress;
     size_t dataSizeInBytes;
+		
 
     if (sscanf(argv[1], "%x", &dataStartAddress) != 1) {
         fprintf(stderr, "Invalid start address\r\n");
@@ -42,12 +43,25 @@ static int crc32(int argc, char **argv) {
         fprintf(stderr, "Invalid size\r\n");
         return 1;
     }
-
-    // 计算 CRC32
-    uint32_t crcResult = calculate_crc32((const void *)dataStartAddress, dataSizeInBytes);
+		
+		
+    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2, GPIO_PIN_RESET);
+	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2, GPIO_PIN_SET);
+    // 硬件 CRC32
+    size_t hard_crc32Result = HAL_CRC_Calculate(&hcrc,( void *)dataStartAddress,dataSizeInBytes);
+    hard_crc32Result ^= 0xffffffffU;
+		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2, GPIO_PIN_RESET);
+		
+		HAL_Delay(10);
+		
+		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2, GPIO_PIN_SET);
+    // 软件 CRC32
+    size_t soft_crc32Result = calculate_crc32((const void *)dataStartAddress, dataSizeInBytes);
+		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2, GPIO_PIN_RESET);
 
     // 输出计算得到的 CRC32 值
-    printf("CRC32: 0x%x\r\n", crcResult);
+    printf("hard_crc32Result: 0x%x\r\n", hard_crc32Result);
+		printf("soft_crc32Result: 0x%x\r\n", soft_crc32Result);
 
     return 0;  // 返回成功码
 }

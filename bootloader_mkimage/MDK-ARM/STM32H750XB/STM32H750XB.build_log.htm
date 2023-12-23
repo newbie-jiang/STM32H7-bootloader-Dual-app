@@ -22,28 +22,22 @@ Dialog DLL:      TCM.DLL V1.36.2.0
  
 <h2>Project:</h2>
 F:\DeskTop\stm32h7bootloader\STM32H7-bootloader-Dual-app\bootloader_mkimage\MDK-ARM\STM32H750XB.uvprojx
-Project File Date:  12/22/2023
+Project File Date:  12/23/2023
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\software_work\keil5\ARM\ARMCC\Bin'
 Build target 'STM32H750XB'
-compiling command.c...
-compiling flash_cmd.c...
-compiling bsp_qspi.c...
-..\BSP\bsp_qspi.c(849): warning:  #940-D: missing return statement at end of non-void function "qspi_flash_read" 
-  }
-..\BSP\bsp_qspi.c(856): warning:  #940-D: missing return statement at end of non-void function "qspi_flash_write" 
-  }
-..\BSP\bsp_qspi.c(862): warning:  #940-D: missing return statement at end of non-void function "qspi_flash_erase" 
-  }
-..\BSP\bsp_qspi.c: 3 warnings, 0 errors
+assembling startup_stm32h750xx.s...
+compiling string.c...
+compiling crc32_cmd.c...
+compiling usart.c...
 linking...
 STM32H750XB\STM32H750XB.axf: Warning: L6304W: Duplicate input file stm32h750xb\string_1.o ignored.
-Program Size: Code=30640 RO-data=1728 RW-data=1828 ZI-data=4916  
+Program Size: Code=31316 RO-data=1728 RW-data=1828 ZI-data=4812  
 Finished: 0 information, 1 warning and 0 error messages.
 FromELF: creating hex file...
 After Build - User command #1: D:\software_work\keil5\ARM\ARMCC\bin\fromelf.exe  --bin -o  ./STM32H750XB/STM32H750XB.bin  ./STM32H750XB/STM32H750XB.axf
-"STM32H750XB\STM32H750XB.axf" - 0 Error(s), 4 Warning(s).
+"STM32H750XB\STM32H750XB.axf" - 0 Error(s), 1 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -67,7 +61,7 @@ Package Vendor: Keil
 
    * Component: ARM::CMSIS:CORE:5.6.0
       Include file:  CMSIS\Core\Include\tz_context.h
-Build Time Elapsed:  00:00:05
+Build Time Elapsed:  00:00:03
 </pre>
 </body>
 </html>
