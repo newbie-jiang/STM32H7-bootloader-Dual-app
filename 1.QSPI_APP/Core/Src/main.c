@@ -71,7 +71,7 @@ int main(void)
 	
 //	SCB->VTOR = 0x90400000; //app2
 	
-//	__enable_irq();
+	__enable_irq();
 	
   /* USER CODE END 1 */
 

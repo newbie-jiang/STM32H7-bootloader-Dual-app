@@ -1,5 +1,8 @@
 #include "interface_cmd.h"
+#include "stdio.h"
+#include "boot.h"
 
+extern void jump_app(uint32_t base_address);
 
 //软件复位
 int interface_reboot(int argc, char **argv)
@@ -12,6 +15,9 @@ int interface_reboot(int argc, char **argv)
 //跳转函数
 int interface_go(int argc, char **argv)
 {
+	jump_app(0x24000000);
+	printf(" go go go \r\n");
+	
    
 	 return 0;
 }

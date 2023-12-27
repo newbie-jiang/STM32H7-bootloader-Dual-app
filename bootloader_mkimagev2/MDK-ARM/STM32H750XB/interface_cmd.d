@@ -50,3 +50,5 @@ stm32h750xb\interface_cmd.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_u
 stm32h750xb\interface_cmd.o: ../shell/include/types.h
 stm32h750xb\interface_cmd.o: ../BSP/bsp_usart.h
 stm32h750xb\interface_cmd.o: ../Core/Inc/usart.h
+stm32h750xb\interface_cmd.o: D:\software_work\keil5\ARM\ARMCC\Bin\..\include\stdio.h
+stm32h750xb\interface_cmd.o: ../BOOT/boot.h

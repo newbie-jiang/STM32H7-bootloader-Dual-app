@@ -85,7 +85,7 @@ void DeInit_all_bsp_and_IRQ(void)
 		
 		
 	 /* 解初始化 SDRAM */
-	 HAL_SDRAM_MspDeInit(&hsdram1);
+//	 HAL_SDRAM_MspDeInit(&hsdram1);
 		
 	 
 	 /*解初始化LED*/ 
@@ -101,10 +101,11 @@ void DeInit_all_bsp_and_IRQ(void)
 	 
 	
 	/*设置所有时钟默认状态恢复HSI*/
-	 HAL_RCC_DeInit();
+//	 HAL_RCC_DeInit();
 	 
 	 /* 为防止qspi时钟 被初始化 */
-	 enable_qspi_clk();
+//	 enable_qspi_clk();
+//    HAL_SDRAM_DeInit(&hsdram1);
 }
 
 
@@ -129,6 +130,11 @@ void jump_app(uint32_t base_address)
     __set_MSP(*(__IO uint32_t*) base_address);
     
     /* 执行跳转 */
+	
+	  SCB->VTOR = 0x24000000;
+	
+//	  memcmp();
+	
     JumpToApplication();
 }
 

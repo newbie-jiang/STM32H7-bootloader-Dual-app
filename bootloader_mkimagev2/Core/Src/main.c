@@ -37,6 +37,7 @@
 #include "bsp_sdram.h"
 #include "aes.h"
 #include "api_information.h"
+#include <stdlib.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -69,23 +70,14 @@ void SystemClock_Config(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
+//SCB->VTOR = 0x90400000;
 
 
 
-
-//获取芯片Flash大小
-//void GetFlashSize ( void )
-//{
-//    uint16_t stm32_Flash_Size;
-//    stm32_Flash_Size = * ( uint16_t * ) ( 0x1FF1E880 ); //闪存容量寄存器
-//	  printf ( "chip flash is: %x \r\n", stm32_Flash_Size );
-//}
-
-// 清除内存块
+//清除内存块
 void clearMemory(void *startAddress, size_t size) {
     memset(startAddress, 0, size);
 }
-
 
 
 void process_data_blocks(volatile uint32_t *input_data, volatile uint32_t *encrypted_data,
@@ -131,10 +123,6 @@ void process_data_blocks(volatile uint32_t *input_data, volatile uint32_t *encry
 }
 
    extern int test(void)    ;
-
-
-
-
 
 /* USER CODE END 0 */
 
