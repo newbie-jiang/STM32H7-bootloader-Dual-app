@@ -1,0 +1,71 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.28.0.0
+Copyright (C) 2019 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 1 1, 1, LIC=76F5U-S6INI-FWB2N-YI6GF-7LG2Z-TECWC
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.28.0.0
+Toolchain Path:  D:\software_work\keil5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.28.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.6.0
+Dialog DLL:      TCM.DLL V1.36.2.0
+ 
+<h2>Project:</h2>
+F:\DeskTop\stm32h7bootloader\STM32H7-bootloader-Dual-app\bootloader_mkimagev2\MDK-ARM\STM32H750XB.uvprojx
+Project File Date:  12/27/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\software_work\keil5\ARM\ARMCC\Bin'
+Build target 'STM32H750XB'
+compiling api_information.c...
+..\interface\api_information.h(42): warning:  #1295-D: Deprecated declaration test_chip_id_info - give arg types
+  void test_chip_id_info();
+..\interface\api_information.c(135): warning:  #1-D: last line of file ends without a newline
+   /*********************************************************************/
+..\interface\api_information.c: 2 warnings, 0 errors
+compiling main.c...
+..\interface\api_information.h(42): warning:  #1295-D: Deprecated declaration test_chip_id_info - give arg types
+  void test_chip_id_info();
+../Core/Src/main.c: 1 warning, 0 errors
+linking...
+Program Size: Code=36320 RO-data=1792 RW-data=1852 ZI-data=4908  
+FromELF: creating hex file...
+After Build - User command #1: D:\software_work\keil5\ARM\ARMCC\bin\fromelf.exe  --bin -o  ./STM32H750XB/STM32H750XB.bin  ./STM32H750XB/STM32H750XB.axf
+"STM32H750XB\STM32H750XB.axf" - 0 Error(s), 3 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32H7xx_DFP.3.0.0.pack
+                Keil.STM32H7xx_DFP.3.0.0
+                STMicroelectronics STM32H7 Series Device Support and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_STM32H750XB
+  D:\software_work\keil5\ARM\CMSIS\5.9.0\CMSIS\Core\Include
+  D:\software_work\keil5\Keil\STM32H7xx_DFP\3.0.0\Drivers\CMSIS\Device\ST\STM32H7xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+      Include file:  CMSIS\Core\Include\tz_context.h
+Build Time Elapsed:  00:00:03
+</pre>
+</body>
+</html>

@@ -10,21 +10,6 @@
 #include "config.h" 
 
 
-/*
-  后期扩展功能：
-	 
-	CRC校验,
-	uart系统参数配置，
-	系统参数保存至内部falsh,
-	
-*/
-
-
-
-
-
-
-
 uint32_t calculate_crc32(const void *data, size_t size);
   
 

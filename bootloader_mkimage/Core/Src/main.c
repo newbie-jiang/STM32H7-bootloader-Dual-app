@@ -160,9 +160,7 @@ int main(void)
 //  size_t memorySize = ;  // 20KB
 //  clearMemory(memoryStartAddress, memorySize); // 清除内存块
 	// 数据起始地址
-//   size_t hardwarecrc1 = HAL_CRC_Accumulate(&hcrc,memoryStartAddress,memorySize);
-//   size_t hardwarecrc2 = HAL_CRC_Calculate(&hcrc,memoryStartAddress,memorySize);
-//	 
+
 	 shell();
 
   /* USER CODE END 2 */

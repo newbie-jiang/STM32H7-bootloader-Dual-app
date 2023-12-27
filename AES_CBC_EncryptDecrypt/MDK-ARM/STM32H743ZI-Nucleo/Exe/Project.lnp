@@ -1,0 +1,20 @@
+--cpu Cortex-M7.fp.dp
+"stm32h743zi-nucleo\exe\stm32h7xx_it.o"
+"stm32h743zi-nucleo\exe\stm32h7xx_hal_msp.o"
+"stm32h743zi-nucleo\exe\cmox_low_level.o"
+"stm32h743zi-nucleo\exe\main.o"
+"stm32h743zi-nucleo\exe\stm32h7xx_hal.o"
+"stm32h743zi-nucleo\exe\stm32h7xx_hal_cortex.o"
+"stm32h743zi-nucleo\exe\stm32h7xx_hal_gpio.o"
+"stm32h743zi-nucleo\exe\stm32h7xx_hal_pwr.o"
+"stm32h743zi-nucleo\exe\stm32h7xx_hal_pwr_ex.o"
+"stm32h743zi-nucleo\exe\stm32h7xx_hal_rcc.o"
+"stm32h743zi-nucleo\exe\stm32h7xx_hal_rcc_ex.o"
+"stm32h743zi-nucleo\exe\stm32h7xx_nucleo_144.o"
+"stm32h743zi-nucleo\exe\system_stm32h7xx.o"
+"../../../../../../Middlewares/ST/STM32_Cryptographic/lib/libSTM32Cryptographic_CM7.a"
+"stm32h743zi-nucleo\exe\startup_stm32h743xx.o"
+--strict --scatter "STM32H743ZI-Nucleo\Exe\Project.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "Project.map" -o STM32H743ZI-Nucleo\Exe\Project.axf

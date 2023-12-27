@@ -10,15 +10,6 @@
 #include "config.h" 
 
 
-/*
-  后期扩展功能：
-	 
-	CRC校验,
-	uart系统参数配置，
-	系统参数保存至内部falsh,
-	
-*/
-
 
 
 
@@ -148,8 +139,7 @@ void jump_app(uint32_t base_address)
  /*     logo 生成网站：http://patorjk.com/software/taag/       */
  
  void display_logo(void)
-{
-	                                                                                                                                                                   
+{                                                                                                                                                                  
   printf("'  BBBBBBBBBBBBBBBBB        OOOOOOOOO          OOOOOOOOO     TTTTTTTTTTTTTTTTTTTTTTT\r\n");
   printf("'  B::::::::::::::::B     OO:::::::::OO      OO:::::::::OO   T:::::::::::::::::::::T\r\n");
   printf("'  B::::::BBBBBB:::::B  OO:::::::::::::OO  OO:::::::::::::OO T:::::::::::::::::::::T\r\n");
@@ -172,7 +162,6 @@ void jump_app(uint32_t base_address)
 	printf("'                                                                                   \r\n");
 	printf("'                                                                                   \r\n");
 	printf("'                                                                                   \r\n");
-
 }
 
 

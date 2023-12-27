@@ -1,0 +1,17 @@
+stm32h750xb\zm.o: ..\zmodem\zm.c
+stm32h750xb\zm.o: ..\zmodem\zglobal.h
+stm32h750xb\zm.o: ..\zmodem\config.h
+stm32h750xb\zm.o: ..\zmodem\zreadline.h
+stm32h750xb\zm.o: D:\software_work\keil5\ARM\ARMCC\Bin\..\include\stddef.h
+stm32h750xb\zm.o: ../zmodem/file/file.h
+stm32h750xb\zm.o: D:\software_work\keil5\ARM\ARMCC\Bin\..\include\stdio.h
+stm32h750xb\zm.o: D:\software_work\keil5\ARM\ARMCC\Bin\..\include\stdlib.h
+stm32h750xb\zm.o: D:\software_work\keil5\ARM\ARMCC\Bin\..\include\ctype.h
+stm32h750xb\zm.o: ../BSP/string.h
+stm32h750xb\zm.o: ../shell/include/types.h
+stm32h750xb\zm.o: ..\zmodem\log.h
+stm32h750xb\zm.o: D:\software_work\keil5\ARM\ARMCC\Bin\..\include\stdarg.h
+stm32h750xb\zm.o: ..\zmodem\crctab.h
+stm32h750xb\zm.o: ..\zmodem\zm.h
+stm32h750xb\zm.o: D:\software_work\keil5\ARM\ARMCC\Bin\..\include\stdint.h
+stm32h750xb\zm.o: ..\zmodem\_zmodem.h
