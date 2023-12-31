@@ -1,5 +1,5 @@
 	#include "bsp_sdram.h"
-
+	#include "fmc.h"
 
 
 	/* USER CODE BEGIN 0 */
@@ -8,7 +8,12 @@
 	#define sdramHandle hsdram1
 	#define SDRAM_TIMEOUT                    ((uint32_t)0xFFFF)  //定义超时时间
 	 
+	 uint32_t bsp_sdram_init(void)
+	{
 	 
+	  MX_FMC_Init();
+	 
+	}
 	 
 
 	 void SDRAM_InitSequence(void)
@@ -132,48 +137,48 @@
 
 
 	/* 初始化并校验 */
-	int bsp_sdram_init(void)
-	{
-		__IO uint32_t i=0;  	  
-		__IO uint32_t temp=0;	   
-		__IO uint32_t read_val=0;	//用于读取SDRAM中的数据
-		__IO uint8_t success_flag=1; //标志位，用于检查数据是否一致
-		
-		SDRAM_InitSequence();/*初始化sdram*/
+//	int bsp_sdram_init(void)
+//	{
+//		__IO uint32_t i=0;  	  
+//		__IO uint32_t temp=0;	   
+//		__IO uint32_t read_val=0;	//用于读取SDRAM中的数据
+//		__IO uint8_t success_flag=1; //标志位，用于检查数据是否一致
+//		
+////		SDRAM_InitSequence();/*初始化sdram*/
 
-		//每隔16K字节,写入一个数据,总共写入2048个数据,刚好是32M字节
-		for(i=0;i<32*1024*1024;i+=16*1024)
-		{
-			*(__IO uint32_t*)(SDRAM_BANK_ADDR+i)=temp; 
-			temp++;
-		}
+//		//每隔16K字节,写入一个数据,总共写入2048个数据,刚好是32M字节
+//		for(i=0;i<32*1024*1024;i+=16*1024)
+//		{
+//			*(__IO uint32_t*)(SDRAM_BANK_ADDR+i)=temp; 
+//			temp++;
+//		}
 
-		//重置temp值
-		temp=0;
+//		//重置temp值
+//		temp=0;
 
-		//依次读出之前写入的数据,进行校验		  
-		for(i=0;i<32*1024*1024;i+=16*1024) 
-		{	
-				read_val=*(__IO uint32_t*)(SDRAM_BANK_ADDR+i);    //SDRAM_BANK_ADDR   BACK0的基地址
-			if(read_val != temp)
-			{
-				success_flag=0; //如果读取的数据与写入的数据不匹配，设置标志位为0
-				break;
-			}
-			temp++;
-		}	
-		
+//		//依次读出之前写入的数据,进行校验		  
+//		for(i=0;i<32*1024*1024;i+=16*1024) 
+//		{	
+//				read_val=*(__IO uint32_t*)(SDRAM_BANK_ADDR+i);    //SDRAM_BANK_ADDR   BACK0的基地址
+//			if(read_val != temp)
+//			{
+//				success_flag=0; //如果读取的数据与写入的数据不匹配，设置标志位为0
+//				break;
+//			}
+//			temp++;
+//		}	
+//		
 
-			if(success_flag)
-			{
-				printf("  checkout sdram : success!!!\r\n");
-				return 0;
-			}
-			else
-			{
-				printf("  checkout sdram : err!!!\r\n");
-				return -1;
-			}		
-	}
+//			if(success_flag)
+//			{
+//				printf("  checkout sdram : success!!!\r\n");
+//				return 0;
+//			}
+//			else
+//			{
+//				printf("  checkout sdram : err!!!\r\n");
+//				return -1;
+//			}		
+//	}
 
 

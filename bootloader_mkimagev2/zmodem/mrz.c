@@ -11,6 +11,12 @@
 
 int rz(int argc, char *argv[])
 {
+	
+//	 if (argc != 2) {
+//        fprintf(stderr, "Usage: rz <address>\r\n");
+//        return 1;  // ·µ»Ø´íÎóÂë
+//    }
+	
 //  int c;
   bool bps_flag = false;
   uint64_t bps = 0u;

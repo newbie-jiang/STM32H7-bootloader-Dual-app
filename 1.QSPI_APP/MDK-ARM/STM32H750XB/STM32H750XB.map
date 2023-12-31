@@ -1873,33 +1873,33 @@ Image Symbol Table
     i.SysTick_Handler                        0x24002782   Section        0  stm32h7xx_it.o(i.SysTick_Handler)
     i.SystemClock_Config                     0x24002784   Section        0  main.o(i.SystemClock_Config)
     i.SystemInit                             0x24002860   Section        0  system_stm32h7xx.o(i.SystemInit)
-    i.TIM7_IRQHandler                        0x2400293c   Section        0  stm32h7xx_it.o(i.TIM7_IRQHandler)
-    i.TIM_Base_SetConfig                     0x24002948   Section        0  stm32h7xx_hal_tim.o(i.TIM_Base_SetConfig)
-    i.UARTEx_SetNbDataToProcess              0x24002a0c   Section        0  stm32h7xx_hal_uart_ex.o(i.UARTEx_SetNbDataToProcess)
-    UARTEx_SetNbDataToProcess                0x24002a0d   Thumb Code    62  stm32h7xx_hal_uart_ex.o(i.UARTEx_SetNbDataToProcess)
-    i.UART_AdvFeatureConfig                  0x24002a50   Section        0  stm32h7xx_hal_uart.o(i.UART_AdvFeatureConfig)
-    i.UART_CheckIdleState                    0x24002b18   Section        0  stm32h7xx_hal_uart.o(i.UART_CheckIdleState)
-    i.UART_EndRxTransfer                     0x24002bc4   Section        0  stm32h7xx_hal_uart.o(i.UART_EndRxTransfer)
-    UART_EndRxTransfer                       0x24002bc5   Thumb Code    78  stm32h7xx_hal_uart.o(i.UART_EndRxTransfer)
-    i.UART_SetConfig                         0x24002c18   Section        0  stm32h7xx_hal_uart.o(i.UART_SetConfig)
-    i.UART_WaitOnFlagUntilTimeout            0x24002fc4   Section        0  stm32h7xx_hal_uart.o(i.UART_WaitOnFlagUntilTimeout)
-    i.UsageFault_Handler                     0x24003050   Section        0  stm32h7xx_it.o(i.UsageFault_Handler)
-    i.__0printf$bare                         0x24003054   Section        0  printfb.o(i.__0printf$bare)
-    i.__NVIC_SetPriority                     0x24003064   Section        0  stm32h7xx_hal_cortex.o(i.__NVIC_SetPriority)
-    __NVIC_SetPriority                       0x24003065   Thumb Code    34  stm32h7xx_hal_cortex.o(i.__NVIC_SetPriority)
-    i.__scatterload_copy                     0x24003086   Section       14  handlers.o(i.__scatterload_copy)
-    i.__scatterload_null                     0x24003094   Section        2  handlers.o(i.__scatterload_null)
-    i.__scatterload_zeroinit                 0x24003096   Section       14  handlers.o(i.__scatterload_zeroinit)
-    i._printf_core                           0x240030a4   Section        0  printfb.o(i._printf_core)
-    _printf_core                             0x240030a5   Thumb Code    34  printfb.o(i._printf_core)
-    i.fputc                                  0x240030c8   Section        0  bsp_usart.o(i.fputc)
-    i.main                                   0x240030e0   Section        0  main.o(i.main)
-    .constdata                               0x24003258   Section       24  stm32h7xx_hal_uart.o(.constdata)
-    .constdata                               0x24003270   Section       16  stm32h7xx_hal_uart_ex.o(.constdata)
-    numerator                                0x24003270   Data           8  stm32h7xx_hal_uart_ex.o(.constdata)
-    denominator                              0x24003278   Data           8  stm32h7xx_hal_uart_ex.o(.constdata)
-    .constdata                               0x24003280   Section       16  system_stm32h7xx.o(.constdata)
-    .conststring                             0x24003290   Section     1469  main.o(.conststring)
+    i.TIM7_IRQHandler                        0x24002930   Section        0  stm32h7xx_it.o(i.TIM7_IRQHandler)
+    i.TIM_Base_SetConfig                     0x2400293c   Section        0  stm32h7xx_hal_tim.o(i.TIM_Base_SetConfig)
+    i.UARTEx_SetNbDataToProcess              0x24002a00   Section        0  stm32h7xx_hal_uart_ex.o(i.UARTEx_SetNbDataToProcess)
+    UARTEx_SetNbDataToProcess                0x24002a01   Thumb Code    62  stm32h7xx_hal_uart_ex.o(i.UARTEx_SetNbDataToProcess)
+    i.UART_AdvFeatureConfig                  0x24002a44   Section        0  stm32h7xx_hal_uart.o(i.UART_AdvFeatureConfig)
+    i.UART_CheckIdleState                    0x24002b0c   Section        0  stm32h7xx_hal_uart.o(i.UART_CheckIdleState)
+    i.UART_EndRxTransfer                     0x24002bb8   Section        0  stm32h7xx_hal_uart.o(i.UART_EndRxTransfer)
+    UART_EndRxTransfer                       0x24002bb9   Thumb Code    78  stm32h7xx_hal_uart.o(i.UART_EndRxTransfer)
+    i.UART_SetConfig                         0x24002c0c   Section        0  stm32h7xx_hal_uart.o(i.UART_SetConfig)
+    i.UART_WaitOnFlagUntilTimeout            0x24002fb8   Section        0  stm32h7xx_hal_uart.o(i.UART_WaitOnFlagUntilTimeout)
+    i.UsageFault_Handler                     0x24003044   Section        0  stm32h7xx_it.o(i.UsageFault_Handler)
+    i.__0printf$bare                         0x24003048   Section        0  printfb.o(i.__0printf$bare)
+    i.__NVIC_SetPriority                     0x24003058   Section        0  stm32h7xx_hal_cortex.o(i.__NVIC_SetPriority)
+    __NVIC_SetPriority                       0x24003059   Thumb Code    34  stm32h7xx_hal_cortex.o(i.__NVIC_SetPriority)
+    i.__scatterload_copy                     0x2400307a   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x24003088   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x2400308a   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i._printf_core                           0x24003098   Section        0  printfb.o(i._printf_core)
+    _printf_core                             0x24003099   Thumb Code    34  printfb.o(i._printf_core)
+    i.fputc                                  0x240030bc   Section        0  bsp_usart.o(i.fputc)
+    i.main                                   0x240030d4   Section        0  main.o(i.main)
+    .constdata                               0x2400324c   Section       24  stm32h7xx_hal_uart.o(.constdata)
+    .constdata                               0x24003264   Section       16  stm32h7xx_hal_uart_ex.o(.constdata)
+    numerator                                0x24003264   Data           8  stm32h7xx_hal_uart_ex.o(.constdata)
+    denominator                              0x2400326c   Data           8  stm32h7xx_hal_uart_ex.o(.constdata)
+    .constdata                               0x24003274   Section       16  system_stm32h7xx.o(.constdata)
+    .conststring                             0x24003284   Section     1469  main.o(.conststring)
     .data                                    0x24040000   Section       12  stm32h7xx_hal.o(.data)
     .data                                    0x2404000c   Section        8  system_stm32h7xx.o(.data)
     .data                                    0x24040014   Section        4  stdout.o(.data)
@@ -2139,26 +2139,26 @@ Image Symbol Table
     SVC_Handler                              0x24002781   Thumb Code     2  stm32h7xx_it.o(i.SVC_Handler)
     SysTick_Handler                          0x24002783   Thumb Code     2  stm32h7xx_it.o(i.SysTick_Handler)
     SystemClock_Config                       0x24002785   Thumb Code   208  main.o(i.SystemClock_Config)
-    SystemInit                               0x24002861   Thumb Code   180  system_stm32h7xx.o(i.SystemInit)
-    TIM7_IRQHandler                          0x2400293d   Thumb Code     6  stm32h7xx_it.o(i.TIM7_IRQHandler)
-    TIM_Base_SetConfig                       0x24002949   Thumb Code   162  stm32h7xx_hal_tim.o(i.TIM_Base_SetConfig)
-    UART_AdvFeatureConfig                    0x24002a51   Thumb Code   200  stm32h7xx_hal_uart.o(i.UART_AdvFeatureConfig)
-    UART_CheckIdleState                      0x24002b19   Thumb Code   170  stm32h7xx_hal_uart.o(i.UART_CheckIdleState)
-    UART_SetConfig                           0x24002c19   Thumb Code   876  stm32h7xx_hal_uart.o(i.UART_SetConfig)
-    UART_WaitOnFlagUntilTimeout              0x24002fc5   Thumb Code   140  stm32h7xx_hal_uart.o(i.UART_WaitOnFlagUntilTimeout)
-    UsageFault_Handler                       0x24003051   Thumb Code     2  stm32h7xx_it.o(i.UsageFault_Handler)
-    __0printf$bare                           0x24003055   Thumb Code     8  printfb.o(i.__0printf$bare)
-    __1printf$bare                           0x24003055   Thumb Code     0  printfb.o(i.__0printf$bare)
-    __2printf                                0x24003055   Thumb Code     0  printfb.o(i.__0printf$bare)
-    __scatterload_copy                       0x24003087   Thumb Code    14  handlers.o(i.__scatterload_copy)
-    __scatterload_null                       0x24003095   Thumb Code     2  handlers.o(i.__scatterload_null)
-    __scatterload_zeroinit                   0x24003097   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    fputc                                    0x240030c9   Thumb Code    18  bsp_usart.o(i.fputc)
-    main                                     0x240030e1   Thumb Code   270  main.o(i.main)
-    UARTPrescTable                           0x24003258   Data          24  stm32h7xx_hal_uart.o(.constdata)
-    D1CorePrescTable                         0x24003280   Data          16  system_stm32h7xx.o(.constdata)
-    Region$$Table$$Base                      0x24003850   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x24003870   Number         0  anon$$obj.o(Region$$Table)
+    SystemInit                               0x24002861   Thumb Code   172  system_stm32h7xx.o(i.SystemInit)
+    TIM7_IRQHandler                          0x24002931   Thumb Code     6  stm32h7xx_it.o(i.TIM7_IRQHandler)
+    TIM_Base_SetConfig                       0x2400293d   Thumb Code   162  stm32h7xx_hal_tim.o(i.TIM_Base_SetConfig)
+    UART_AdvFeatureConfig                    0x24002a45   Thumb Code   200  stm32h7xx_hal_uart.o(i.UART_AdvFeatureConfig)
+    UART_CheckIdleState                      0x24002b0d   Thumb Code   170  stm32h7xx_hal_uart.o(i.UART_CheckIdleState)
+    UART_SetConfig                           0x24002c0d   Thumb Code   876  stm32h7xx_hal_uart.o(i.UART_SetConfig)
+    UART_WaitOnFlagUntilTimeout              0x24002fb9   Thumb Code   140  stm32h7xx_hal_uart.o(i.UART_WaitOnFlagUntilTimeout)
+    UsageFault_Handler                       0x24003045   Thumb Code     2  stm32h7xx_it.o(i.UsageFault_Handler)
+    __0printf$bare                           0x24003049   Thumb Code     8  printfb.o(i.__0printf$bare)
+    __1printf$bare                           0x24003049   Thumb Code     0  printfb.o(i.__0printf$bare)
+    __2printf                                0x24003049   Thumb Code     0  printfb.o(i.__0printf$bare)
+    __scatterload_copy                       0x2400307b   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x24003089   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x2400308b   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    fputc                                    0x240030bd   Thumb Code    18  bsp_usart.o(i.fputc)
+    main                                     0x240030d5   Thumb Code   270  main.o(i.main)
+    UARTPrescTable                           0x2400324c   Data          24  stm32h7xx_hal_uart.o(.constdata)
+    D1CorePrescTable                         0x24003274   Data          16  system_stm32h7xx.o(.constdata)
+    Region$$Table$$Base                      0x24003844   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x24003864   Number         0  anon$$obj.o(Region$$Table)
     uwTickFreq                               0x24040000   Data           1  stm32h7xx_hal.o(.data)
     uwTickPrio                               0x24040004   Data           4  stm32h7xx_hal.o(.data)
     uwTick                                   0x24040008   Data           4  stm32h7xx_hal.o(.data)
@@ -2177,9 +2177,9 @@ Memory Map of the image
 
   Image Entry point : 0x24000299
 
-  Load Region LR_IROM1 (Base: 0x24000000, Size: 0x00003888, Max: 0x00040000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x24000000, Size: 0x0000387c, Max: 0x00040000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x24000000, Load base: 0x24000000, Size: 0x00003870, Max: 0x00040000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x24000000, Load base: 0x24000000, Size: 0x00003864, Max: 0x00040000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -2260,42 +2260,42 @@ Memory Map of the image
     0x24002780   0x24002780   0x00000002   Code   RO          267    i.SVC_Handler       stm32h7xx_it.o
     0x24002782   0x24002782   0x00000002   Code   RO          268    i.SysTick_Handler   stm32h7xx_it.o
     0x24002784   0x24002784   0x000000dc   Code   RO           15    i.SystemClock_Config  main.o
-    0x24002860   0x24002860   0x000000dc   Code   RO         4330    i.SystemInit        system_stm32h7xx.o
-    0x2400293c   0x2400293c   0x0000000c   Code   RO          269    i.TIM7_IRQHandler   stm32h7xx_it.o
-    0x24002948   0x24002948   0x000000c4   Code   RO          642    i.TIM_Base_SetConfig  stm32h7xx_hal_tim.o
-    0x24002a0c   0x24002a0c   0x00000044   Code   RO         1988    i.UARTEx_SetNbDataToProcess  stm32h7xx_hal_uart_ex.o
-    0x24002a50   0x24002a50   0x000000c8   Code   RO         1597    i.UART_AdvFeatureConfig  stm32h7xx_hal_uart.o
-    0x24002b18   0x24002b18   0x000000aa   Code   RO         1598    i.UART_CheckIdleState  stm32h7xx_hal_uart.o
-    0x24002bc2   0x24002bc2   0x00000002   PAD
-    0x24002bc4   0x24002bc4   0x00000054   Code   RO         1609    i.UART_EndRxTransfer  stm32h7xx_hal_uart.o
-    0x24002c18   0x24002c18   0x000003ac   Code   RO         1615    i.UART_SetConfig    stm32h7xx_hal_uart.o
-    0x24002fc4   0x24002fc4   0x0000008c   Code   RO         1622    i.UART_WaitOnFlagUntilTimeout  stm32h7xx_hal_uart.o
-    0x24003050   0x24003050   0x00000002   Code   RO          270    i.UsageFault_Handler  stm32h7xx_it.o
-    0x24003052   0x24003052   0x00000002   PAD
-    0x24003054   0x24003054   0x00000010   Code   RO         4444    i.__0printf$bare    mc_w.l(printfb.o)
-    0x24003064   0x24003064   0x00000022   Code   RO          425    i.__NVIC_SetPriority  stm32h7xx_hal_cortex.o
-    0x24003086   0x24003086   0x0000000e   Code   RO         4743    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x24003094   0x24003094   0x00000002   Code   RO         4744    i.__scatterload_null  mc_w.l(handlers.o)
-    0x24003096   0x24003096   0x0000000e   Code   RO         4745    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x240030a4   0x240030a4   0x00000022   Code   RO         4451    i._printf_core      mc_w.l(printfb.o)
-    0x240030c6   0x240030c6   0x00000002   PAD
-    0x240030c8   0x240030c8   0x00000018   Code   RO         4392    i.fputc             bsp_usart.o
-    0x240030e0   0x240030e0   0x00000178   Code   RO           16    i.main              main.o
-    0x24003258   0x24003258   0x00000018   Data   RO         1623    .constdata          stm32h7xx_hal_uart.o
-    0x24003270   0x24003270   0x00000010   Data   RO         1989    .constdata          stm32h7xx_hal_uart_ex.o
-    0x24003280   0x24003280   0x00000010   Data   RO         4331    .constdata          system_stm32h7xx.o
-    0x24003290   0x24003290   0x000005bd   Data   RO           17    .conststring        main.o
-    0x2400384d   0x2400384d   0x00000003   PAD
-    0x24003850   0x24003850   0x00000020   Data   RO         4741    Region$$Table       anon$$obj.o
+    0x24002860   0x24002860   0x000000d0   Code   RO         4330    i.SystemInit        system_stm32h7xx.o
+    0x24002930   0x24002930   0x0000000c   Code   RO          269    i.TIM7_IRQHandler   stm32h7xx_it.o
+    0x2400293c   0x2400293c   0x000000c4   Code   RO          642    i.TIM_Base_SetConfig  stm32h7xx_hal_tim.o
+    0x24002a00   0x24002a00   0x00000044   Code   RO         1988    i.UARTEx_SetNbDataToProcess  stm32h7xx_hal_uart_ex.o
+    0x24002a44   0x24002a44   0x000000c8   Code   RO         1597    i.UART_AdvFeatureConfig  stm32h7xx_hal_uart.o
+    0x24002b0c   0x24002b0c   0x000000aa   Code   RO         1598    i.UART_CheckIdleState  stm32h7xx_hal_uart.o
+    0x24002bb6   0x24002bb6   0x00000002   PAD
+    0x24002bb8   0x24002bb8   0x00000054   Code   RO         1609    i.UART_EndRxTransfer  stm32h7xx_hal_uart.o
+    0x24002c0c   0x24002c0c   0x000003ac   Code   RO         1615    i.UART_SetConfig    stm32h7xx_hal_uart.o
+    0x24002fb8   0x24002fb8   0x0000008c   Code   RO         1622    i.UART_WaitOnFlagUntilTimeout  stm32h7xx_hal_uart.o
+    0x24003044   0x24003044   0x00000002   Code   RO          270    i.UsageFault_Handler  stm32h7xx_it.o
+    0x24003046   0x24003046   0x00000002   PAD
+    0x24003048   0x24003048   0x00000010   Code   RO         4444    i.__0printf$bare    mc_w.l(printfb.o)
+    0x24003058   0x24003058   0x00000022   Code   RO          425    i.__NVIC_SetPriority  stm32h7xx_hal_cortex.o
+    0x2400307a   0x2400307a   0x0000000e   Code   RO         4743    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x24003088   0x24003088   0x00000002   Code   RO         4744    i.__scatterload_null  mc_w.l(handlers.o)
+    0x2400308a   0x2400308a   0x0000000e   Code   RO         4745    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x24003098   0x24003098   0x00000022   Code   RO         4451    i._printf_core      mc_w.l(printfb.o)
+    0x240030ba   0x240030ba   0x00000002   PAD
+    0x240030bc   0x240030bc   0x00000018   Code   RO         4392    i.fputc             bsp_usart.o
+    0x240030d4   0x240030d4   0x00000178   Code   RO           16    i.main              main.o
+    0x2400324c   0x2400324c   0x00000018   Data   RO         1623    .constdata          stm32h7xx_hal_uart.o
+    0x24003264   0x24003264   0x00000010   Data   RO         1989    .constdata          stm32h7xx_hal_uart_ex.o
+    0x24003274   0x24003274   0x00000010   Data   RO         4331    .constdata          system_stm32h7xx.o
+    0x24003284   0x24003284   0x000005bd   Data   RO           17    .conststring        main.o
+    0x24003841   0x24003841   0x00000003   PAD
+    0x24003844   0x24003844   0x00000020   Data   RO         4741    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x24040000, Load base: 0x24003870, Size: 0x000008f8, Max: 0x00040000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x24040000, Load base: 0x24003864, Size: 0x000008f8, Max: 0x00040000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x24040000   0x24003870   0x0000000c   Data   RW         3467    .data               stm32h7xx_hal.o
-    0x2404000c   0x2400387c   0x00000008   Data   RW         4332    .data               system_stm32h7xx.o
-    0x24040014   0x24003884   0x00000004   Data   RW         4717    .data               mc_w.l(stdout.o)
+    0x24040000   0x24003864   0x0000000c   Data   RW         3467    .data               stm32h7xx_hal.o
+    0x2404000c   0x24003870   0x00000008   Data   RW         4332    .data               system_stm32h7xx.o
+    0x24040014   0x24003878   0x00000004   Data   RW         4717    .data               mc_w.l(stdout.o)
     0x24040018        -       0x00000094   Zero   RW          222    .bss                usart.o
     0x240400ac        -       0x0000004c   Zero   RW          370    .bss                stm32h7xx_hal_timebase_tim.o
     0x240400f8        -       0x00000800   Zero   RW            1    STACK               startup_stm32h750xx.o
@@ -2325,11 +2325,11 @@ Image component sizes
       1816        112         24          0          0      27210   stm32h7xx_hal_uart.o
        284          6         16          0          0       3977   stm32h7xx_hal_uart_ex.o
         30          6          0          0          0       4936   stm32h7xx_it.o
-       220         40         16          8          0       1602   system_stm32h7xx.o
+       208         36         16          8          0       1594   system_stm32h7xx.o
        276         26          0          0        148       2088   usart.o
 
     ----------------------------------------------------------------------
-     11890        778       2224         20       2272    1467324   Object Totals
+     11878        774       2224         20       2272    1467316   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         12          0          3          0          0          0   (incl. Padding)
 
@@ -2374,15 +2374,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     12224        802       2224         24       2272    1461776   Grand Totals
-     12224        802       2224         24       2272    1461776   ELF Image Totals
-     12224        802       2224         24          0          0   ROM Totals
+     12212        798       2224         24       2272    1461768   Grand Totals
+     12212        798       2224         24       2272    1461768   ELF Image Totals
+     12212        798       2224         24          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                14448 (  14.11kB)
+    Total RO  Size (Code + RO Data)                14436 (  14.10kB)
     Total RW  Size (RW Data + ZI Data)              2296 (   2.24kB)
-    Total ROM Size (Code + RO Data + RW Data)      14472 (  14.13kB)
+    Total ROM Size (Code + RO Data + RW Data)      14460 (  14.12kB)
 
 ==============================================================================
 

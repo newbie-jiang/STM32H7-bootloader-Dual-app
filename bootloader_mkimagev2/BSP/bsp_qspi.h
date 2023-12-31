@@ -102,24 +102,7 @@ int8_t 	QSPI_W25Qxx_ReadBuffer(uint8_t* pBuffer, uint32_t ReadAddr, uint32_t Num
 
 
 
-typedef struct struct_qspi{
-  int8_t   (*qspi_w25qxx_init)(void);
-	int8_t   (*qspi_w25qxx_reset)(void);
-	uint32_t (*qspi_w25qxx_read_id)(void);
-	int8_t   (*qspi_w25qxx_memorymap)(void);
-	int8_t   (*qspi_w25qxx_SectorErase_4k)(uint32_t baseAddress);    
-	int8_t   (*qspi_w25qxx_BlockErase_32k)(uint32_t baseAddress);
-	int8_t   (*qspi_w25qxx_BlockErase_64k)(uint32_t baseAddress);
-  int8_t   (*qspi_w25qxx_ChipErase)(void);
-	int8_t	 (*qspi_w25qxx_WritePage)(uint8_t* pBuffer, uint32_t WriteAddr, uint16_t NumByteToWrite);	
-  int8_t	 (*qspi_w25qxx_WriteBuffer)(uint8_t* pData, uint32_t WriteAddr, uint32_t Size);				
-  int8_t   (*qspi_w25qxx_ReadBuffer)(uint8_t* pBuffer, uint32_t ReadAddr, uint32_t NumByteToRead);	
-}struct_qspi,*psqspi_flash;
 
-
-//struct struct_qspi *get_qspi(void);
-
-extern struct_qspi  qspi_w26q64;
 #endif // QSPI_w25q64_H 
 
 

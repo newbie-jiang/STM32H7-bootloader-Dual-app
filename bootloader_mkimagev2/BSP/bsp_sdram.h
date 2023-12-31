@@ -48,7 +48,7 @@ extern SDRAM_HandleTypeDef hsdram1;
  void SDRAM_InitSequence(void);
  void fsmc_sdram_test(void);
  
- int bsp_sdram_init(void);
+	 uint32_t bsp_sdram_init(void);
 
 /* USER CODE BEGIN Prototypes */
 

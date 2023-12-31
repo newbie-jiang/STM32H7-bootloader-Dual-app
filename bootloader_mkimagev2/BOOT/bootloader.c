@@ -20,7 +20,7 @@ BACK PARAMENT:  0X007F F000 ---> 0X007F FFFF      SIZE : 0X1000       4K
 
 
 */
-   psqspi_flash pqspi_flash = &qspi_w26q64;
+
 	 
 	 
 	 
@@ -57,15 +57,8 @@ int read_qspi_falsh_data(){
 
 
 uint32_t bootloade( ){
-	
-     //初始化QSPI     
-	   pqspi_flash->qspi_w25qxx_init(); 
-	
-	   //解密AES
-	
-	   //检测QSPI数据
-	   read_qspi_falsh_data();
-	   
+    
+
 	   
 	   
 

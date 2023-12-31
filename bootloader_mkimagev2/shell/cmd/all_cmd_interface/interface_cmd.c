@@ -15,8 +15,9 @@ int interface_reboot(int argc, char **argv)
 //Ìø×ªº¯Êý
 int interface_go(int argc, char **argv)
 {
-	jump_app(0x24000000);
-	printf(" go go go \r\n");
+	//	printf(" go go go \r\n");
+	jump_app(0xC0000000);
+
 	
    
 	 return 0;

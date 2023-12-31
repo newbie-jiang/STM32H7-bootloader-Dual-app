@@ -71,4 +71,7 @@ stm32h750xb\main.o: ../BSP/bsp_usart.h
 stm32h750xb\main.o: ../BSP/bsp_sdram.h
 stm32h750xb\main.o: D:\software_work\keil5\ARM\ARMCC\Bin\..\include\stdio.h
 stm32h750xb\main.o: ../AES/aes.h
-stm32h750xb\main.o: ..\interface\api_information.h
+stm32h750xb\main.o: ../interface/api_information.h
+stm32h750xb\main.o: ../interface/api_led.h
+stm32h750xb\main.o: ../interface/api_qspi.h
+stm32h750xb\main.o: ../interface/api_sdram.h

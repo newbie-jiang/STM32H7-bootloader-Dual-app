@@ -57,7 +57,7 @@ void enable_qspi_clk(void)
 
 
 
-
+extern CRC_HandleTypeDef hcrc;
 
 
 /* 确保一个干净的bootloader 我们需要解初始化用到的所有外设以及中断  只保留QSPI，在APP中就不需要动QSPI了 */
@@ -81,7 +81,7 @@ void DeInit_all_bsp_and_IRQ(void)
 	
 	
 	 /* 解初始化 SD卡 */
-	 HAL_SD_MspDeInit(&hsd1);
+//	 HAL_SD_MspDeInit(&hsd1);
 		
 		
 	 /* 解初始化 SDRAM */
@@ -93,11 +93,11 @@ void DeInit_all_bsp_and_IRQ(void)
 	 HAL_GPIO_DeInit(LED_B_GPIO_Port,LED_R_Pin);
 		
 	 /*解初始化 SD_CAP*/
-	 HAL_GPIO_DeInit(SD_CAP_GPIO_Port,SD_CAP_Pin);
-		
+//	 HAL_GPIO_DeInit(SD_CAP_GPIO_Port,SD_CAP_Pin);
+	 HAL_CRC_MspDeInit(&hcrc);
 		
 	 /*解初始化usart */
-   HAL_UART_MspDeInit(&huart4);
+
 	 
 	
 	/*设置所有时钟默认状态恢复HSI*/
@@ -106,6 +106,13 @@ void DeInit_all_bsp_and_IRQ(void)
 	 /* 为防止qspi时钟 被初始化 */
 //	 enable_qspi_clk();
 //    HAL_SDRAM_DeInit(&hsdram1);
+   __HAL_RCC_FMC_CLK_ENABLE();
+
+	 
+	 
+
+	 
+	 HAL_UART_MspDeInit(&huart4);
 }
 
 
@@ -115,7 +122,7 @@ void DeInit_all_bsp_and_IRQ(void)
 /* 函数功能：跳转到 app */
 void jump_app(uint32_t base_address)
 {
-//    pFunction JumpToApplication;
+    //pFunction JumpToApplication;
 
     /* 取消初始化所有外设和中断 */
     DeInit_all_bsp_and_IRQ();
@@ -131,9 +138,9 @@ void jump_app(uint32_t base_address)
     
     /* 执行跳转 */
 	
-	  SCB->VTOR = 0x24000000;
+	  SCB->VTOR = base_address;
 	
-//	  memcmp();
+
 	
     JumpToApplication();
 }

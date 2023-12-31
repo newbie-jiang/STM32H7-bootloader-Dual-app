@@ -87,7 +87,7 @@ void test_clock_info(api_clock_info * pclock_info)
   * @param  enum { id_0 ,id_1 ,id_2}.
   * @retval chipid size
   */
-uint32_t  api_get_chipid(chip_id_which echip_id_which)
+static uint32_t  api_get_chipid(chip_id_which echip_id_which)
 {
 	 
 	  /* stm32_h7_id */
@@ -142,7 +142,7 @@ void test_chip_id_info()
   * @param  None.
   * @retval chip Flash_Size.
   */
-uint32_t api_get_flash_size(void)
+static uint32_t api_get_flash_size(void)
 {
 	
      uint32_t stm32_Flash_Size;

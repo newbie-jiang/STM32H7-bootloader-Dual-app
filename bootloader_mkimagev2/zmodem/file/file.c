@@ -32,8 +32,8 @@ unsigned int sleep(unsigned int seconds)
 
 FILE *fopen2(const char *pathname, const char *mode)
 {
-	g_rcv_st.datas   = (unsigned char *)0x24000000;
-//	g_rcv_st.datas   = (unsigned char *)0xc0000000;
+//	g_rcv_st.datas   = (unsigned char *)0x24000000;
+	g_rcv_st.datas   = (unsigned char *)0xc0000000;
 	g_rcv_st.offset  = 0;
 	g_rcv_st.st_size = 0;
 	return (FILE *)1;

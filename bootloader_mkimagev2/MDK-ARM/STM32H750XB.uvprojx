@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32H750xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32H7xx_HAL_Driver/Inc;../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32H7xx/Include;../Drivers/CMSIS/Include;../BSP;../BOOT;../FATFS/Target;../FATFS/App;../Middlewares/Third_Party/FatFs/src;../shell/include;../shell/cmd;../zmodem/file;../zmodem;../shell/cmd/all_cmd_interface;../software_aes_cbc;../AES;..\interface</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32H7xx_HAL_Driver/Inc;../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32H7xx/Include;../Drivers/CMSIS/Include;../BSP;../BOOT;../FATFS/Target;../FATFS/App;../Middlewares/Third_Party/FatFs/src;../shell/include;../shell/cmd;../zmodem/file;../zmodem;../shell/cmd/all_cmd_interface;../software_aes_cbc;../AES;../interface;..\AES\include;..\AES\cipher;..\AES\legacy_v3\include\cipher;..\AES\include\cipher;..\AES\legacy_v3\include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -348,7 +348,7 @@
             <thumb>0</thumb>
             <SplitLS>0</SplitLS>
             <SwStkChk>0</SwStkChk>
-            <NoWarn>0</NoWarn>
+            <NoWarn>1</NoWarn>
             <uSurpInc>0</uSurpInc>
             <useXO>0</useXO>
             <uClangAs>0</uClangAs>
@@ -1374,6 +1374,36 @@
           </Files>
         </Group>
         <Group>
+          <GroupName>API</GroupName>
+          <Files>
+            <File>
+              <FileName>api_information.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\interface\api_information.c</FilePath>
+            </File>
+            <File>
+              <FileName>api_led.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\interface\api_led.c</FilePath>
+            </File>
+            <File>
+              <FileName>api_qspi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\interface\api_qspi.c</FilePath>
+            </File>
+            <File>
+              <FileName>api_sdram.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\interface\api_sdram.c</FilePath>
+            </File>
+            <File>
+              <FileName>api_uart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\interface\api_uart.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
           <GroupName>BOOT</GroupName>
           <Files>
             <File>
@@ -1400,16 +1430,6 @@
               <FileName>bootloader.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\BOOT\bootloader.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>API</GroupName>
-          <Files>
-            <File>
-              <FileName>api_information.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\interface\api_information.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -2266,6 +2286,21 @@
               <FileName>test.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\AES\test.c</FilePath>
+            </File>
+            <File>
+              <FileName>aes_process.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\AES\aes_process.c</FilePath>
+            </File>
+            <File>
+              <FileName>cmox_low_level.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\AES\cmox_low_level.c</FilePath>
+            </File>
+            <File>
+              <FileName>libSTM32Cryptographic_CM7.a</FileName>
+              <FileType>4</FileType>
+              <FilePath>..\AES\libSTM32Cryptographic_CM7.a</FilePath>
             </File>
           </Files>
         </Group>

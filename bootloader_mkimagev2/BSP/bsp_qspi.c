@@ -877,28 +877,7 @@ struct flash_ops *get_flash(void)
 
 
 
-struct_qspi  qspi_w26q64={
-      
-  .qspi_w25qxx_init = QSPI_W25Qxx_Init,
-	.qspi_w25qxx_reset = QSPI_W25Qxx_Reset,
-	.qspi_w25qxx_read_id = QSPI_W25Qxx_ReadID,
-	.qspi_w25qxx_memorymap = QSPI_W25Qxx_MemoryMappedMode,
-	.qspi_w25qxx_SectorErase_4k = QSPI_W25Qxx_SectorErase,
-	.qspi_w25qxx_BlockErase_32k = QSPI_W25Qxx_BlockErase_32K,
-	.qspi_w25qxx_BlockErase_64k = QSPI_W25Qxx_BlockErase_64K,
-	.qspi_w25qxx_ChipErase = QSPI_W25Qxx_ChipErase,
-	.qspi_w25qxx_WritePage = QSPI_W25Qxx_WritePage,
-	.qspi_w25qxx_WriteBuffer = QSPI_W25Qxx_WriteBuffer,
-	.qspi_w25qxx_ReadBuffer = QSPI_W25Qxx_ReadBuffer,
-};
 
-
-struct struct_qspi *get_qspi(void)
-{
-	 struct struct_qspi *qspi_instance = malloc(sizeof(struct struct_qspi));
-
-   return qspi_instance;
-}
 
 
 
